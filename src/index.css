@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Inter", "Arial", sans-serif;
+  --color-cream: #fff7df;
+  --color-ink: #121212;
+  --color-paper: #fffdf6;
+  --color-yellow-pop: #ffd84d;
+  --color-blue-pop: #79c7ff;
+  --color-pink-pop: #ff8fb3;
+  --color-green-pop: #a6f36b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 216, 77, 0.35), transparent 24rem),
+    radial-gradient(circle at 85% 20%, rgba(121, 199, 255, 0.28), transparent 22rem),
+    var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-yellow-pop);
+  color: var(--color-ink);
+}
+
+.brutal-card {
+  border: 3px solid var(--color-ink);
+  box-shadow: 8px 8px 0 var(--color-ink);
+  background: var(--color-paper);
+}
+
+.brutal-card-sm {
+  border: 2px solid var(--color-ink);
+  box-shadow: 5px 5px 0 var(--color-ink);
+  background: var(--color-paper);
+}
+
+.brutal-button {
+  border: 3px solid var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.brutal-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.section-title {
+  letter-spacing: -0.04em;
+}
