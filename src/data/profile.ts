@@ -11,5 +11,5 @@ export const profile = {
     'I build REST APIs, design PostgreSQL databases, and deploy web applications with Docker, Nginx, and AWS EC2.',
   about:
     'I am a third-year Information Technology student at HCMUTE, focusing on backend development and practical software deployment. I enjoy building systems that are functional, maintainable, and deployable. My recent work includes an e-learning platform with REST APIs, PostgreSQL database design, authentication/RBAC, Docker-based deployment, and basic CI/CD.',
-  highlights: ['GPA 3.3/4.0', 'Backend Scholarship', 'AWS Academy', 'Docker + AWS Deployment'],
+  highlights: ['GPA 3.3/4.0', 'Backend Scholarship', 'Java & Spring Boot', 'Docker & AWS Deployment'],
 };

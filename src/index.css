@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-@theme {
-  --font-display: "Inter", "Arial", sans-serif;
+:root {
   --color-cream: #fff7df;
   --color-ink: #121212;
   --color-paper: #fffdf6;
@@ -11,18 +10,48 @@
   --color-green-pop: #a6f36b;
 }
 
+[data-theme="dark"] {
+  --color-cream: #121214;
+  --color-ink: #f4f4f5;
+  --color-paper: #1e1e24;
+  --color-yellow-pop: #eab308;
+  --color-blue-pop: #3b82f6;
+  --color-pink-pop: #ec4899;
+  --color-green-pop: #22c55e;
+}
+
+@theme {
+  --font-display: "Inter", "Arial", sans-serif;
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-paper: var(--color-paper);
+  --color-yellow-pop: var(--color-yellow-pop);
+  --color-blue-pop: var(--color-blue-pop);
+  --color-pink-pop: var(--color-pink-pop);
+  --color-green-pop: var(--color-green-pop);
+}
+
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease;
 }
 
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 10% 10%, rgba(255, 216, 77, 0.35), transparent 24rem),
-    radial-gradient(circle at 85% 20%, rgba(121, 199, 255, 0.28), transparent 22rem),
+    radial-gradient(circle at 10% 10%, rgba(255, 216, 77, 0.25), transparent 24rem),
+    radial-gradient(circle at 85% 20%, rgba(121, 199, 255, 0.20), transparent 22rem),
     var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-display);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(234, 179, 8, 0.12), transparent 24rem),
+    radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.10), transparent 22rem),
+    var(--color-cream);
 }
 
 ::selection {
@@ -34,18 +63,20 @@ body {
   border: 3px solid var(--color-ink);
   box-shadow: 8px 8px 0 var(--color-ink);
   background: var(--color-paper);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brutal-card-sm {
   border: 2px solid var(--color-ink);
   box-shadow: 5px 5px 0 var(--color-ink);
   background: var(--color-paper);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brutal-button {
   border: 3px solid var(--color-ink);
   box-shadow: 4px 4px 0 var(--color-ink);
-  transition: transform 120ms ease, box-shadow 120ms ease;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .brutal-button:hover {

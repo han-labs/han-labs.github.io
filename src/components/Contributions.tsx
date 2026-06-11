@@ -21,16 +21,16 @@ const contributions = [
 
 export function Contributions() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
+    <section className="mx-auto max-w-7xl px-4 py-7 md:px-6 md:py-9">
       <SectionHeader eyebrow="Contribute" title="What I can bring to a team." />
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {contributions.map((item, index) => (
           <article
             key={item.title}
-            className={`brutal-card-sm p-4 md:p-5 ${index % 2 === 0 ? 'bg-blue-pop' : 'bg-green-pop'}`}
+            className={`brutal-card-sm p-3.5 md:p-4 ${index % 2 === 0 ? 'bg-blue-pop' : 'bg-green-pop'}`}
           >
-            <h3 className="text-lg font-black">{item.title}</h3>
-            <p className="mt-2 text-sm font-semibold leading-relaxed text-ink/90">{item.text}</p>
+            <h3 className="text-base font-black text-ink">{item.title}</h3>
+            <p className="mt-2 text-xs font-semibold leading-relaxed text-ink/90">{item.text}</p>
           </article>
         ))}
       </div>

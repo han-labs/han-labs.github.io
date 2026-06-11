@@ -20,7 +20,7 @@ const getLinkText = (link: string, title: string) => {
 
 export function BeyondCode() {
   return (
-    <section id="beyond" className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
+    <section id="beyond" className="mx-auto max-w-7xl px-4 py-7 md:px-6 md:py-9">
       <SectionHeader
         eyebrow="Beyond the Code"
         title="Beyond the Code"
@@ -38,19 +38,18 @@ export function BeyondCode() {
                   src={item.image || '/assets/beyond-placeholder.svg'}
                   alt={`${item.title} thumbnail`}
                   onError={(e) => {
-                    // Fallback if image fails to load
                     (e.target as HTMLImageElement).src = '/assets/beyond-placeholder.svg';
                   }}
                 />
               </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-base md:text-lg font-black text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm font-semibold leading-relaxed text-ink/80 flex-grow">
+              <div className="p-3.5 flex flex-col flex-grow">
+                <h3 className="text-sm md:text-base font-black text-ink">{item.title}</h3>
+                <p className="mt-2 text-xs font-semibold leading-relaxed text-ink/80 flex-grow">
                   {item.description}
                 </p>
                 {hasRealLink ? (
                   <a
-                    className="brutal-button bg-yellow-pop px-3 py-1.5 text-xs font-black inline-block w-fit mt-4 text-center"
+                    className="brutal-button bg-yellow-pop px-2.5 py-1 text-xs font-black inline-block w-fit mt-3.5 text-center text-ink"
                     href={item.link}
                     target="_blank"
                     rel="noreferrer"

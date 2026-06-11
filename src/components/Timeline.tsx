@@ -19,7 +19,7 @@ const getLinkText = (link: string, title: string) => {
 
 export function Timeline() {
   return (
-    <section id="achievements" className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
+    <section id="achievements" className="mx-auto max-w-7xl px-4 py-7 md:px-6 md:py-9">
       <SectionHeader
         eyebrow="Timeline"
         title="Achievements and milestones."
