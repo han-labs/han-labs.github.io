@@ -1,67 +1,124 @@
-import { beyondCodeItems } from '../data/beyondCode';
+import { useState } from 'react';
+import { beyondCodeItems, LocalizedJourneyArticle } from '../data/beyondCode';
 import { SectionHeader } from './SectionHeader';
-
-const getLinkText = (link: string, title: string) => {
-  const t = title.toLowerCase();
-  if (t.includes('scholarship') || t.includes('recognition')) {
-    return 'View Detail';
-  }
-  if (t.includes('article') || t.includes('story') || t.includes('profile')) {
-    return 'Read Article';
-  }
-  if (t.includes('mentor') || t.includes('activity') || t.includes('community')) {
-    return 'View Activity';
-  }
-  if (t.includes('research')) {
-    return 'View Detail';
-  }
-  return 'View Detail';
-};
+import { useLanguage } from '../context/LanguageContext';
 
 export function BeyondCode() {
+  const { lang, t } = useLanguage();
+  const [activeArticle, setActiveArticle] = useState<LocalizedJourneyArticle | null>(null);
+
+  // Disable scroll when modal is open
+  if (typeof window !== 'undefined') {
+    if (activeArticle) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }
+
   return (
-    <section id="beyond" className="mx-auto max-w-7xl px-4 py-7 md:px-6 md:py-9">
+    <section id="beyond" className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-4.5">
       <SectionHeader
-        eyebrow="Beyond the Code"
-        title="Beyond the Code"
-        description="Activities, scholarships, research, and stories that shaped my learning journey."
+        eyebrow={t('beyond.eyebrow')}
+        title={t('beyond.title')}
       />
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4.5 md:grid-cols-3 mt-4">
         {beyondCodeItems.map((item) => {
-          const hasRealLink = item.link && !item.link.startsWith('#todo');
-          
+          const currentArticle = item[lang];
           return (
-            <article key={item.title} className="brutal-card-sm overflow-hidden flex flex-col h-full bg-paper">
-              <div className="relative aspect-[3/2] w-full border-b-2 border-ink overflow-hidden bg-cream">
-                <img
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                  src={item.image || '/assets/beyond-placeholder.svg'}
-                  alt={`${item.title} thumbnail`}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/assets/beyond-placeholder.svg';
-                  }}
-                />
-              </div>
-              <div className="p-3.5 flex flex-col flex-grow">
-                <h3 className="text-sm md:text-base font-black text-ink">{item.title}</h3>
-                <p className="mt-2 text-xs font-semibold leading-relaxed text-ink/80 flex-grow">
-                  {item.description}
+            <article
+              key={currentArticle.title}
+              onClick={() => setActiveArticle(currentArticle)}
+              className="brutal-card-sm p-3.5 md:p-4 flex flex-col justify-between cursor-pointer hover:-translate-y-1 transition-transform duration-200 bg-paper"
+            >
+              <div>
+                <div className="flex justify-between items-center mb-3">
+                  <span className="border border-ink bg-blue-pop px-2 py-0.5 text-[9px] font-black text-ink select-none">
+                    {t('article.tag')}
+                  </span>
+                  <span className="text-[10px] font-bold text-ink/70">{t('article.readtime')}</span>
+                </div>
+                <h3 className="text-sm md:text-base font-black text-ink hover:underline">
+                  {currentArticle.title}
+                </h3>
+                <p className="mt-2 text-[11px] font-semibold leading-relaxed text-ink/80">
+                  {currentArticle.excerpt}
                 </p>
-                {hasRealLink ? (
-                  <a
-                    className="brutal-button bg-yellow-pop px-2.5 py-1 text-xs font-black inline-block w-fit mt-3.5 text-center text-ink"
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {getLinkText(item.link, item.title)}
-                  </a>
-                ) : null}
               </div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveArticle(currentArticle);
+                }}
+                className="mt-4 text-[10px] font-black underline hover:text-pink-pop text-left cursor-pointer text-ink"
+              >
+                {t('article.read')} →
+              </button>
             </article>
           );
         })}
       </div>
+
+      {/* Article Overlay Modal styled to match design screenshot */}
+      {activeArticle && (
+        <div
+          className="article-backdrop fixed inset-0 z-50 flex items-center justify-center p-4"
+          onClick={() => setActiveArticle(null)}
+        >
+          <div
+            className="border-4 border-ink bg-paper max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 relative shadow-[6px_6px_0_var(--color-line)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top-Right Square Pink Close Button with border and shadow */}
+            <button
+              onClick={() => setActiveArticle(null)}
+              className="absolute top-4 right-4 border-2 border-ink bg-pink-pop h-8 w-8 flex items-center justify-center font-black cursor-pointer text-sm text-ink select-none shadow-[3px_3px_0_var(--color-line)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--color-line)] transition-all"
+              aria-label="Close modal"
+            >
+              ✕
+            </button>
+
+            {/* Modal Header */}
+            <div className="pr-8">
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="border-2 border-ink bg-blue-pop px-2.5 py-0.5 text-xs font-black text-ink select-none">
+                  {t('article.tag')}
+                </span>
+                <span className="text-xs font-bold text-ink/70">{t('article.readtime')}</span>
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-ink leading-tight mb-4">
+                {activeArticle.title}
+              </h3>
+              {/* Quote Block with thick vertical left border */}
+              <p className="text-xs md:text-sm font-semibold italic text-ink/80 border-l-[4px] border-ink pl-3.5 mb-5">
+                {activeArticle.intro}
+              </p>
+            </div>
+
+            {/* Modal Sections */}
+            <div className="space-y-4 mt-4 text-ink">
+              {activeArticle.sections.map((section, idx) => (
+                <div key={idx} className="space-y-1">
+                  <h4 className="text-sm md:text-base font-black">{section.heading}</h4>
+                  <p className="text-xs md:text-sm font-semibold leading-relaxed text-ink/85">
+                    {section.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Close Button at the bottom */}
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={() => setActiveArticle(null)}
+                className="border-2 border-ink bg-yellow-pop px-4 py-1.5 text-xs font-black text-ink cursor-pointer select-none shadow-[3px_3px_0_var(--color-line)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--color-line)] transition-all"
+              >
+                {t('article.close')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

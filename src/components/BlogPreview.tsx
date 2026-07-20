@@ -15,7 +15,7 @@ export function BlogPreview() {
   }
 
   return (
-    <section id="writing" className="mx-auto max-w-7xl px-4 py-7 md:px-6 md:py-9">
+    <section id="writing" className="mx-auto max-w-5xl px-4 py-5 md:px-6 md:py-7">
       <SectionHeader
         eyebrow="Writing"
         title="Project case studies and notes."
@@ -36,10 +36,10 @@ export function BlogPreview() {
                 </span>
                 <span className="text-[10px] font-bold text-ink/70">{post.readingTime}</span>
               </div>
-              <h3 className="text-base md:text-lg font-black text-ink hover:underline">
+              <h3 className="text-sm md:text-base font-black text-ink hover:underline">
                 {post.title}
               </h3>
-              <p className="mt-2 text-xs font-semibold leading-relaxed text-ink/80">
+              <p className="mt-2 text-[11px] font-semibold leading-relaxed text-ink/80">
                 {post.excerpt}
               </p>
             </div>
@@ -48,7 +48,7 @@ export function BlogPreview() {
                 e.stopPropagation();
                 setActivePost(post);
               }}
-              className="mt-4 text-[11px] font-black underline hover:text-pink-pop text-left cursor-pointer text-ink"
+              className="mt-4 text-[10px] font-black underline hover:text-pink-pop text-left cursor-pointer text-ink"
             >
               Read Article →
             </button>
@@ -56,20 +56,20 @@ export function BlogPreview() {
         ))}
       </div>
 
-      {/* Neobrutalist Reading Modal */}
+      {/* Neobrutalist Reading Modal styled to match design screenshot */}
       {activePost && (
         <div
-          className="fixed inset-0 z-50 bg-ink/60 backdrop-blur-sm flex items-center justify-center p-4"
+          className="article-backdrop fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={() => setActivePost(null)}
         >
           <div
-            className="brutal-card bg-paper max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 md:p-7 relative shadow-[8px_8px_0_rgba(18,18,18,1)]"
+            className="border-4 border-ink bg-paper max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 relative shadow-[6px_6px_0_var(--color-line)]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
+            {/* Top-Right Square Pink Close Button with border and shadow */}
             <button
               onClick={() => setActivePost(null)}
-              className="absolute top-4 right-4 brutal-button bg-pink-pop h-8 w-8 flex items-center justify-center font-black cursor-pointer text-sm text-ink select-none"
+              className="absolute top-4 right-4 border-2 border-ink bg-pink-pop h-8 w-8 flex items-center justify-center font-black cursor-pointer text-sm text-ink select-none shadow-[3px_3px_0_var(--color-line)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--color-line)] transition-all"
               aria-label="Close modal"
             >
               ✕
@@ -77,16 +77,17 @@ export function BlogPreview() {
 
             {/* Modal Header */}
             <div className="pr-8">
-              <div className="flex items-center gap-2 mb-2.5">
-                <span className="border-2 border-ink bg-blue-pop px-2 py-0.5 text-[10px] font-black text-ink">
+              <div className="flex items-center gap-2.5 mb-3.5">
+                <span className="border-2 border-ink bg-blue-pop px-2.5 py-0.5 text-xs font-black text-ink select-none">
                   {activePost.tag}
                 </span>
                 <span className="text-xs font-bold text-ink/70">{activePost.readingTime}</span>
               </div>
-              <h3 className="text-xl md:text-2xl font-black text-ink leading-tight mb-3">
+              <h3 className="text-xl md:text-2xl font-black text-ink leading-tight mb-4">
                 {activePost.title}
               </h3>
-              <p className="text-xs md:text-sm font-semibold italic text-ink/80 border-l-4 border-ink pl-3 mb-5">
+              {/* Quote Block with thick vertical left border */}
+              <p className="text-xs md:text-sm font-semibold italic text-ink/80 border-l-[4px] border-ink pl-3.5 mb-5">
                 {activePost.intro}
               </p>
             </div>
@@ -103,19 +104,19 @@ export function BlogPreview() {
               ))}
             </div>
 
-            {/* Closing Learnings */}
-            <div className="mt-6 border-2 border-ink bg-green-pop/10 p-4 brutal-card-sm">
+            {/* What I Learned Card with border, shadow, and white/paper background */}
+            <div className="mt-6 border-2 border-ink bg-paper p-4 shadow-[4px_4px_0_var(--color-line)]">
               <h5 className="text-xs md:text-sm font-black text-ink mb-1">What I Learned</h5>
               <p className="text-[11px] md:text-xs font-semibold leading-relaxed text-ink/90">
                 {activePost.whatILearned}
               </p>
             </div>
 
-            {/* Bottom Close Action */}
+            {/* Bottom Yellow Close Action Button with border and shadow */}
             <div className="mt-6 flex justify-end">
               <button
                 onClick={() => setActivePost(null)}
-                className="brutal-button bg-yellow-pop px-4 py-1.5 text-xs font-black text-ink cursor-pointer select-none"
+                className="border-2 border-ink bg-yellow-pop px-4 py-1.5 text-xs font-black text-ink cursor-pointer select-none shadow-[3px_3px_0_var(--color-line)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--color-line)] transition-all"
               >
                 Close Article
               </button>

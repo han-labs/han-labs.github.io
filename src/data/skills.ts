@@ -1,22 +1,22 @@
 export const skills = [
   {
-    group: 'Languages',
-    items: ['JavaScript', 'Java'],
+    group: 'Java & Spring',
+    items: ['Java', 'Spring Boot', 'Spring MVC', 'Spring Security', 'Spring Data JPA', 'Hibernate'],
   },
   {
-    group: 'Backend',
-    items: ['Node.js', 'Express.js', 'Spring Boot', 'REST API', 'Authentication', 'RBAC'],
+    group: 'Backend Foundations',
+    items: ['REST APIs', 'OOP', 'Layered Architecture', 'JWT', 'RBAC', 'Maven'],
   },
   {
-    group: 'Database',
-    items: ['PostgreSQL', 'Supabase', 'Spring Data JPA', 'Flyway'],
+    group: 'Databases',
+    items: ['MySQL', 'PostgreSQL', 'SQL', 'Flyway'],
   },
   {
-    group: 'DevOps & Cloud',
-    items: ['Docker', 'Docker Compose', 'Nginx', 'AWS EC2', 'GitHub Actions'],
+    group: 'Development Tools',
+    items: ['IntelliJ IDEA', 'Git', 'GitHub', 'Postman', 'Docker'],
   },
   {
-    group: 'Tools',
-    items: ['Git', 'GitHub', 'Postman', 'Render', 'Agile/Scrum'],
+    group: 'Delivery & Collaboration',
+    items: ['Docker Compose', 'Nginx', 'AWS EC2', 'GitHub Actions', 'Agile/Scrum'],
   },
 ];

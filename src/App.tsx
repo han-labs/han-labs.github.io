@@ -7,14 +7,15 @@ import { Projects } from './components/Projects';
 import { Timeline } from './components/Timeline';
 import { BeyondCode } from './components/BeyondCode';
 import { Certificates } from './components/Certificates';
-import { BlogPreview } from './components/BlogPreview';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { ScrollSpy } from './components/ScrollSpy';
 
 export default function App() {
   return (
     <>
       <Navbar />
+      <ScrollSpy />
       <main>
         <Hero />
         <About />
@@ -24,7 +25,6 @@ export default function App() {
         <Timeline />
         <BeyondCode />
         <Certificates />
-        <BlogPreview />
         <Contact />
       </main>
       <Footer />

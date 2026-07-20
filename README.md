@@ -1,6 +1,6 @@
 # Huynh Gia Han Portfolio
 
-Personal portfolio for Backend Developer Intern applications.
+Personal portfolio for Software Developer Intern applications.
 
 ## Run locally
 

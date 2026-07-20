@@ -3,6 +3,7 @@
 :root {
   --color-cream: #fff7df;
   --color-ink: #121212;
+  --color-line: #121212;
   --color-paper: #fffdf6;
   --color-yellow-pop: #ffd84d;
   --color-blue-pop: #79c7ff;
@@ -11,17 +12,18 @@
 }
 
 [data-theme="dark"] {
-  --color-cream: #121214;
-  --color-ink: #f4f4f5;
-  --color-paper: #1e1e24;
-  --color-yellow-pop: #eab308;
-  --color-blue-pop: #3b82f6;
-  --color-pink-pop: #ec4899;
-  --color-green-pop: #22c55e;
+  --color-cream: #0d1117;
+  --color-ink: #e6edf3;
+  --color-line: #30363d;
+  --color-paper: #161b22;
+  --color-yellow-pop: #805d00;
+  --color-blue-pop: #1f6feb;
+  --color-pink-pop: #6e40c9;
+  --color-green-pop: #238636;
 }
 
 @theme {
-  --font-display: "Inter", "Arial", sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", "Arial", sans-serif;
   --color-cream: var(--color-cream);
   --color-ink: var(--color-ink);
   --color-paper: var(--color-paper);
@@ -48,10 +50,7 @@ body {
 }
 
 [data-theme="dark"] body {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(234, 179, 8, 0.12), transparent 24rem),
-    radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.10), transparent 22rem),
-    var(--color-cream);
+  background: var(--color-cream);
 }
 
 ::selection {
@@ -60,30 +59,92 @@ body {
 }
 
 .brutal-card {
-  border: 3px solid var(--color-ink);
-  box-shadow: 8px 8px 0 var(--color-ink);
+  border: 2px solid var(--color-line);
   background: var(--color-paper);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .brutal-card-sm {
-  border: 2px solid var(--color-ink);
-  box-shadow: 5px 5px 0 var(--color-ink);
+  border: 1.5px solid var(--color-line);
   background: var(--color-paper);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.brutal-dashed-card {
+  border: 3.5px dashed var(--color-line);
+  background: var(--color-paper);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .brutal-button {
-  border: 3px solid var(--color-ink);
-  box-shadow: 4px 4px 0 var(--color-ink);
+  border: 2px solid var(--color-line);
+  box-shadow: 2px 2px 0 var(--color-line);
   transition: transform 120ms ease, box-shadow 120ms ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .brutal-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--color-ink);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--color-line);
+}
+
+[data-theme="dark"] .border-ink {
+  border-color: var(--color-line);
+}
+
+[data-theme="dark"] .brutal-button:hover {
+  filter: brightness(1.14);
+  transform: none;
+  box-shadow: 0 1px 0 rgba(1, 4, 9, 0.4);
+}
+
+[data-theme="dark"] .brutal-button {
+  box-shadow: 0 1px 0 rgba(1, 4, 9, 0.4);
+}
+
+/* Five distinct GitHub-inspired accents, applied only in dark mode. */
+[data-theme="dark"] .hero-action-resume {
+  background: #238636;
+}
+
+[data-theme="dark"] .hero-action-github {
+  background: #30363d;
+}
+
+[data-theme="dark"] .hero-action-linkedin {
+  background: #1f6feb;
+}
+
+[data-theme="dark"] .hero-action-projects {
+  background: #6e40c9;
+}
+
+[data-theme="dark"] .hero-action-email {
+  background: #bf3989;
+}
+
+.article-backdrop {
+  background: rgba(15, 23, 42, 0.38);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+[data-theme="dark"] .article-backdrop {
+  background: rgba(1, 4, 9, 0.62);
 }
 
 .section-title {
   letter-spacing: -0.04em;
+}
+
+/* Custom thin scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--color-cream);
+  border: 1px solid var(--color-ink);
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
 }

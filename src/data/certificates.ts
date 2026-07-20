@@ -18,8 +18,14 @@ export const certificates = [
     proof: '#todo-vti-devops',
   },
   {
-    name: 'Agile/Scrum Training Certificate',
-    issuer: 'Axon Active',
+    en: {
+      name: 'Agile/Scrum Training Certificate',
+      issuer: 'Axon Active',
+    },
+    vi: {
+      name: 'Chứng chỉ Đào tạo Agile/Scrum',
+      issuer: 'Axon Active',
+    },
     date: '2026',
     proof: '#todo-agile-scrum',
   },

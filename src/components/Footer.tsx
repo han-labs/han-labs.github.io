@@ -1,41 +1,21 @@
 import { profile } from '../data/profile';
+import { useLanguage } from '../context/LanguageContext';
 
 export function Footer() {
+  const { lang } = useLanguage();
+  const currentProfile = profile[lang];
+
   return (
-    <footer className="border-t-4 border-ink bg-paper px-4 py-6 text-sm font-bold md:px-6 text-ink transition-colors duration-300">
-      <div className="mx-auto max-w-7xl grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-start">
-        
-        {/* Profile Details */}
-        <div className="space-y-0.5">
-          <p className="font-black text-base">{profile.name}</p>
-          <p className="text-xs text-ink/85">{profile.role}</p>
-          <p className="text-xs text-ink/75">HCMUTE Information Technology Student</p>
+    <footer className="border-t border-ink bg-paper px-4 py-4 md:px-6 text-[10px] font-semibold text-ink transition-colors duration-300">
+      <div className="mx-auto max-w-5xl flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="text-center sm:text-left">
+          <span className="font-black">{profile.name}</span> · {currentProfile.role}
         </div>
-
-        {/* Location & Quick Links */}
-        <div className="space-y-0.5">
-          <p className="text-xs text-ink/80">{profile.location}</p>
-          <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs font-black">
-            <a href={`mailto:${profile.email}`} className="underline hover:text-pink-pop transition-colors">
-              Email
-            </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" className="underline hover:text-pink-pop transition-colors">
-              GitHub
-            </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="underline hover:text-pink-pop transition-colors">
-              LinkedIn
-            </a>
-          </div>
+        <div className="flex items-center gap-2 text-ink/75 text-[9px] text-center sm:text-right">
+          <span>React · Vite · Tailwind · GitHub Pages</span>
+          <span>·</span>
+          <span>© 2026 All rights reserved</span>
         </div>
-
-        {/* Stack Credits */}
-        <div className="text-xs md:text-right lg:col-span-1 space-y-0.5">
-          <p>© 2026 {profile.name}. All rights reserved.</p>
-          <p className="text-[10px] text-ink/75">
-            Built with React, Vite, Tailwind CSS, and GitHub Pages
-          </p>
-        </div>
-
       </div>
     </footer>
   );
