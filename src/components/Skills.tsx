@@ -13,24 +13,24 @@ const GROUP_TRANSLATIONS: Record<string, Record<string, string>> = {
 export function Skills() {
   const { lang, t } = useLanguage();
   return (
-    <section id="skills" className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-4.5">
+    <section id="skills" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader eyebrow={t('skills.eyebrow')} title={t('skills.title')} />
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 gap-y-1.5 mt-3">
+      <div className="mt-3 grid grid-cols-1 gap-y-2.5 md:grid-cols-2 md:gap-x-12">
         {skills.map((skill) => {
           const translatedGroup = GROUP_TRANSLATIONS[skill.group]?.[lang] || skill.group;
           return (
             <div
               key={skill.group}
-              className="flex items-center gap-2 border-b border-ink/10 pb-1.5 last:border-0"
+              className="flex items-center gap-3 border-b border-ink/10 pb-2.5 last:border-0"
             >
-              <span className="text-[10px] font-black uppercase tracking-wider text-ink w-20 md:w-24 shrink-0">
+              <span className="w-24 shrink-0 text-[11px] font-bold uppercase tracking-wider text-ink md:w-28">
                 {translatedGroup}
               </span>
-              <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-1.5">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="bg-cream border border-ink/20 px-1.5 py-0.5 text-[9px] font-semibold text-ink"
+                    className="border border-ink/20 bg-cream px-2 py-1 text-[10px] font-normal text-ink"
                   >
                     {item}
                   </span>

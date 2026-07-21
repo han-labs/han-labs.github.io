@@ -50,7 +50,9 @@ export function ScrollSpy() {
     } else {
       const el = document.getElementById(id.substring(1));
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+        const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 0;
+        const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     }
   };

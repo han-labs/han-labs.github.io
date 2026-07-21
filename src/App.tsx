@@ -10,10 +10,12 @@ import { Certificates } from './components/Certificates';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollSpy } from './components/ScrollSpy';
+import { AmbientScene } from './components/AmbientScene';
 
 export default function App() {
   return (
     <>
+      <AmbientScene />
       <Navbar />
       <ScrollSpy />
       <main>

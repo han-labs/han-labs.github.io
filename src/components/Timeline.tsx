@@ -8,7 +8,7 @@ export function Timeline() {
   const { lang, t } = useLanguage();
 
   return (
-    <section id="achievements" className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-4.5">
+    <section id="achievements" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader
         eyebrow={t('timeline.eyebrow')}
         title={t('timeline.title')}
@@ -19,14 +19,14 @@ export function Timeline() {
         <div className="absolute left-0 right-0 top-[18px] h-[2px] bg-ink" />
 
         {/* Horizontal Scrollable Container */}
-        <div className="flex gap-4 overflow-x-auto pb-3 pt-1 px-2 scrollbar-thin snap-x justify-start">
+        <div className="flex gap-6 overflow-x-auto pb-4 pt-1 px-2 scrollbar-thin snap-x justify-start">
           {achievements.map((yearGroup, index) => {
             const dotColor = DOT_COLORS[index % DOT_COLORS.length];
 
             return (
               <article
                 key={yearGroup.year}
-                className="flex-shrink-0 w-48 snap-start relative pt-8 text-center flex flex-col items-center"
+                className="relative flex w-52 flex-shrink-0 snap-start flex-col items-center pt-8 text-center"
               >
                 {/* Node dot centered on the line */}
                 <div
@@ -34,7 +34,7 @@ export function Timeline() {
                 />
 
                 <div className="flex flex-col items-center w-full">
-                  <span className="inline-block border border-ink bg-ink text-paper px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider mb-2 rounded-sm select-none">
+                  <span className="mb-2 inline-block select-none rounded-sm border border-ink bg-ink px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-paper">
                     {yearGroup.year}
                   </span>
                   
@@ -43,10 +43,10 @@ export function Timeline() {
                       const currentItem = item[lang];
                       return (
                         <div key={itemIdx} className="flex flex-col items-center max-w-[170px]">
-                          <h4 className="text-[11px] font-black text-ink leading-tight">
+                          <h4 className="text-xs font-semibold leading-tight text-ink">
                             {currentItem.title}
                           </h4>
-                          <p className="mt-1 text-[9px] font-semibold text-ink/75 leading-relaxed">
+                          <p className="mt-1.5 text-[10px] font-normal leading-relaxed text-ink/70">
                             {currentItem.description}
                           </p>
                         </div>

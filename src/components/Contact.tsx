@@ -6,29 +6,29 @@ export function Contact() {
   const currentProfile = profile[lang];
 
   return (
-    <section id="contact" className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-4.5">
-      <div className="brutal-card bg-yellow-pop p-4.5 md:p-6">
-        <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+    <section id="contact" className="mx-auto max-w-6xl px-4 pb-10 pt-5 md:px-6 md:pb-12 md:pt-6">
+      <div className="brutal-card bg-yellow-pop p-5 md:p-7">
+        <div className="grid gap-7 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           
           {/* Left Column: Info & Details */}
           <div>
-            <span className="inline-block border-2 border-ink bg-paper px-2 py-0.5 text-[9px] font-black uppercase tracking-wider mb-2 shadow-[1.5px_1.5px_0_rgba(18,18,18,1)] text-ink">
+            <span className="mb-2.5 inline-block border-2 border-ink bg-paper px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink shadow-[1.5px_1.5px_0_rgba(18,18,18,1)]">
               {t('contact.eyebrow')}
             </span>
-            <h2 className="section-title text-xl font-black leading-tight md:text-2xl text-ink">
+            <h2 className="section-title text-2xl font-bold leading-tight text-ink md:text-3xl">
               {t('contact.title')}
             </h2>
-            <p className="mt-2 text-xs font-semibold leading-relaxed text-ink/90">
+            <p className="mt-3 text-sm font-normal leading-relaxed text-ink/85">
               {t('contact.desc')}
             </p>
             
-            <div className="mt-3.5 space-y-1 text-[11px] font-bold text-ink">
+            <div className="mt-4 space-y-1.5 text-xs font-semibold text-ink">
               <div>
                 {t('contact.location')}: {currentProfile.location}
               </div>
               <div>
                 {t('contact.email')}:{' '}
-                <a className="underline hover:text-ink/75" href={`mailto:${profile.email}`}>
+                <a className="break-all underline hover:text-ink/75" href={`mailto:${profile.email}`}>
                   {profile.email}
                 </a>
               </div>
@@ -38,13 +38,13 @@ export function Contact() {
           {/* Right Column: Actions Grid */}
           <div className="grid gap-2 sm:grid-cols-2">
             <a
-              className="brutal-button bg-pink-pop px-3 py-2 text-center text-[10px] font-black flex items-center justify-center text-ink cursor-pointer select-none"
+              className="brutal-button flex cursor-pointer select-none items-center justify-center bg-pink-pop px-3.5 py-2.5 text-center text-xs font-semibold text-ink"
               href={`mailto:${profile.email}`}
             >
               Email
             </a>
             <a
-              className="brutal-button bg-green-pop px-3 py-2 text-center text-[10px] font-black flex items-center justify-center text-ink cursor-pointer select-none"
+              className="brutal-button flex cursor-pointer select-none items-center justify-center bg-green-pop px-3.5 py-2.5 text-center text-xs font-semibold text-ink"
               href={profile.github}
               target="_blank"
               rel="noreferrer"
@@ -52,7 +52,7 @@ export function Contact() {
               GitHub
             </a>
             <a
-              className="brutal-button bg-blue-pop px-3 py-2 text-center text-[10px] font-black flex items-center justify-center text-ink cursor-pointer select-none"
+              className="brutal-button flex cursor-pointer select-none items-center justify-center bg-blue-pop px-3.5 py-2.5 text-center text-xs font-semibold text-ink"
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -60,7 +60,7 @@ export function Contact() {
               LinkedIn
             </a>
             <a
-              className="brutal-button bg-yellow-pop px-3 py-2 text-center text-[10px] font-black flex items-center justify-center text-ink cursor-pointer select-none"
+              className="brutal-button flex cursor-pointer select-none items-center justify-center bg-yellow-pop px-3.5 py-2.5 text-center text-xs font-semibold text-ink"
               href={profile.cv}
               target="_blank"
               rel="noreferrer"

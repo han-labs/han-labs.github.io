@@ -56,7 +56,7 @@ const translations: Record<string, Record<Language, string>> = {
   'contact.eyebrow': { en: 'Get in Touch', vi: 'Liên hệ' },
   'contact.title': { en: 'Let’s build something meaningful.', vi: 'Hãy cùng nhau xây dựng những giá trị ý nghĩa.' },
   'contact.desc': { 
-    en: 'I’m looking for a Software Developer Intern opportunity where I can contribute with care, learn from an experienced team, and grow through real product challenges.', 
+    en: 'I’m open to Software Developer Internship opportunities where I can contribute thoughtfully, learn from an experienced team, and grow by solving real product challenges.',
     vi: 'Tôi đang tìm kiếm cơ hội Thực tập sinh Kỹ sư Phần mềm để đóng góp bằng sự tận tụy, học hỏi từ đội ngũ giàu kinh nghiệm và phát triển bản thân qua những thử thách sản phẩm thực tế.' 
   },
   'contact.location': { en: 'Location', vi: 'Địa điểm' },

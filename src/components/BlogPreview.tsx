@@ -15,7 +15,7 @@ export function BlogPreview() {
   }
 
   return (
-    <section id="writing" className="mx-auto max-w-5xl px-4 py-5 md:px-6 md:py-7">
+    <section id="writing" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-7">
       <SectionHeader
         eyebrow="Writing"
         title="Project case studies and notes."

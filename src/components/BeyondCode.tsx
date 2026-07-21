@@ -17,31 +17,31 @@ export function BeyondCode() {
   }
 
   return (
-    <section id="beyond" className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-4.5">
+    <section id="beyond" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader
         eyebrow={t('beyond.eyebrow')}
         title={t('beyond.title')}
       />
-      <div className="grid gap-4.5 md:grid-cols-3 mt-4">
+      <div className="mt-5 grid gap-5 md:grid-cols-3">
         {beyondCodeItems.map((item) => {
           const currentArticle = item[lang];
           return (
             <article
               key={currentArticle.title}
               onClick={() => setActiveArticle(currentArticle)}
-              className="brutal-card-sm p-3.5 md:p-4 flex flex-col justify-between cursor-pointer hover:-translate-y-1 transition-transform duration-200 bg-paper"
+              className="brutal-card-sm flex cursor-pointer flex-col justify-between bg-paper p-4 transition-transform duration-200 hover:-translate-y-1 md:p-5"
             >
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="border border-ink bg-blue-pop px-2 py-0.5 text-[9px] font-black text-ink select-none">
+                  <span className="select-none border border-ink bg-blue-pop px-2 py-0.5 text-[10px] font-bold text-ink">
                     {t('article.tag')}
                   </span>
                   <span className="text-[10px] font-bold text-ink/70">{t('article.readtime')}</span>
                 </div>
-                <h3 className="text-sm md:text-base font-black text-ink hover:underline">
+                <h3 className="text-base font-semibold text-ink hover:underline md:text-lg">
                   {currentArticle.title}
                 </h3>
-                <p className="mt-2 text-[11px] font-semibold leading-relaxed text-ink/80">
+                <p className="mt-2.5 text-xs font-normal leading-relaxed text-ink/75">
                   {currentArticle.excerpt}
                 </p>
               </div>
@@ -50,7 +50,7 @@ export function BeyondCode() {
                   e.stopPropagation();
                   setActiveArticle(currentArticle);
                 }}
-                className="mt-4 text-[10px] font-black underline hover:text-pink-pop text-left cursor-pointer text-ink"
+                className="mt-5 cursor-pointer text-left text-[11px] font-semibold text-ink underline hover:text-pink-pop"
               >
                 {t('article.read')} →
               </button>

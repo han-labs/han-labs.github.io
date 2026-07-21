@@ -16,15 +16,15 @@ export function Hero() {
   const currentProfile = profile[lang];
 
   return (
-    <section className="mx-auto grid max-w-5xl gap-4.5 px-4 py-4 md:min-h-[290px] md:grid-cols-[1.55fr_0.45fr] md:px-6 md:py-5">
+    <section className="mx-auto grid max-w-6xl gap-5 px-4 py-5 md:min-h-[340px] md:grid-cols-[1.38fr_0.62fr] md:px-6 md:py-6">
       {/* Intro Card with Dashed Border */}
-      <div className="brutal-dashed-card flex h-full flex-col p-4 md:p-5">
+      <div className="brutal-dashed-card flex h-full flex-col p-5 md:p-6">
         <div>
-          <h1 className="section-title text-xl font-black leading-tight text-ink sm:text-2xl md:text-3xl">
+          <h1 className="section-title text-3xl font-bold leading-tight text-ink sm:text-4xl md:text-[42px]">
             {profile.name}
           </h1>
-          <p className="mt-1.5 text-sm font-black text-ink">{currentProfile.role}</p>
-          <p className="mt-3 max-w-xl whitespace-pre-line text-xs font-semibold leading-relaxed text-ink/95 sm:text-xs md:text-[13px]">
+          <p className="mt-2 text-base font-semibold text-ink">{currentProfile.role}</p>
+          <p className="mt-3.5 max-w-2xl whitespace-pre-line text-sm font-normal leading-relaxed text-ink/90 md:text-[15px]">
             {currentProfile.heroLine}
           </p>
         </div>
@@ -33,17 +33,17 @@ export function Hero() {
 
         <div className="space-y-3.5">
           {/* Buttons (scaled down) */}
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-2.5">
-            <a className="hero-action-resume brutal-button bg-yellow-pop px-3 py-1.5 text-[11px] font-black text-ink" href={profile.cv} target="_blank" rel="noreferrer">
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-3">
+            <a className="hero-action-resume brutal-button bg-yellow-pop px-3.5 py-2 text-xs font-bold text-ink" href={profile.cv} target="_blank" rel="noreferrer">
               {t('hero.viewcv')}
             </a>
-            <a className="hero-action-github brutal-button bg-green-pop px-3 py-1.5 text-[11px] font-black text-ink" href={profile.github} target="_blank" rel="noreferrer">
+            <a className="hero-action-github brutal-button bg-green-pop px-3.5 py-2 text-xs font-bold text-ink" href={profile.github} target="_blank" rel="noreferrer">
               {t('hero.github')}
             </a>
-            <a className="hero-action-linkedin brutal-button bg-blue-pop px-3 py-1.5 text-[11px] font-black text-ink" href={profile.linkedin} target="_blank" rel="noreferrer">
+            <a className="hero-action-linkedin brutal-button bg-blue-pop px-3.5 py-2 text-xs font-bold text-ink" href={profile.linkedin} target="_blank" rel="noreferrer">
               {t('hero.linkedin')}
             </a>
-            <a className="hero-action-projects brutal-button bg-paper px-3 py-1.5 text-[11px] font-black text-ink" href="#projects">
+            <a className="hero-action-projects brutal-button bg-paper px-3.5 py-2 text-xs font-bold text-ink" href="#projects">
               {t('hero.viewprojects')}
             </a>
 
@@ -51,7 +51,7 @@ export function Hero() {
               <button
                 type="button"
                 onClick={() => setShowEmailPopover(!showEmailPopover)}
-                className="hero-action-email brutal-button cursor-pointer bg-pink-pop px-3 py-1.5 text-[11px] font-black text-ink"
+                className="hero-action-email brutal-button cursor-pointer bg-pink-pop px-3.5 py-2 text-xs font-bold text-ink"
                 aria-expanded={showEmailPopover}
               >
                 {t('hero.emailme')}
@@ -95,7 +95,7 @@ export function Hero() {
 
           <div className="grid gap-2.5 sm:grid-cols-2">
             {currentProfile.highlights.map((item) => (
-              <div key={item} className="border border-ink bg-paper px-2 py-1 text-center text-[9px] font-black text-ink">
+              <div key={item} className="border border-ink bg-paper px-3 py-1.5 text-center text-[10px] font-semibold text-ink">
                 {item}
               </div>
             ))}
@@ -104,9 +104,9 @@ export function Hero() {
       </div>
 
       {/* Avatar Image Card with Dashed Border (narrower column makes image smaller) */}
-      <div className="brutal-dashed-card overflow-hidden bg-yellow-pop flex items-center justify-center w-full aspect-square md:aspect-auto md:h-full max-w-[200px] md:max-w-full mx-auto">
+      <div className="brutal-dashed-card overflow-hidden bg-yellow-pop flex items-center justify-center w-full aspect-square md:aspect-auto md:h-full max-w-[280px] sm:max-w-[300px] md:max-w-full mx-auto">
         <img
-          className="w-full h-full object-cover object-[center_24%]"
+          className="h-full w-full scale-[1.08] object-cover object-[center_24%]"
           src={profile.avatar}
           alt="Portrait of Huynh Gia Han"
         />

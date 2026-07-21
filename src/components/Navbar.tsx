@@ -30,15 +30,15 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b-4 border-ink bg-cream/95 backdrop-blur transition-colors duration-300">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 md:px-6">
-        <a href="#" className="text-xl font-black tracking-tight text-ink">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6">
+        <a href="#" className="text-2xl font-bold tracking-tight text-ink">
           H.G.HAN
         </a>
 
         {/* Desktop Links */}
         <div className="hidden items-center gap-5 md:flex">
           {links.map((link) => (
-            <a key={link.href} className="font-bold hover:underline text-ink" href={link.href}>
+            <a key={link.href} className="text-[15px] font-semibold hover:underline text-ink" href={link.href}>
               {t(link.key)}
             </a>
           ))}
