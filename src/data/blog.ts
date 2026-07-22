@@ -81,7 +81,7 @@ export const posts: BlogPost[] = [
         content: 'I used bcrypt to hash passwords with a salt factor of 10 before saving them to the database. I also ensured headers were protected using helmet.js to shield the express app against common security leaks.',
       },
     ],
-    whatILearned: 'I learned how stateless authentication improves API scalability, how to write robust middleware in Express.js, and the importance of secure password management practices in user databases.',
+    whatILearned: 'I learned how stateless authentication improves API scalability, how to write robust middleware in Express.js, and the importance of secure password management in user databases.',
     link: '#auth-rbac',
   },
 ];
