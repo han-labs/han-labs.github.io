@@ -1,6 +1,6 @@
 # Huynh Gia Han Portfolio
 
-Personal portfolio for Software Developer Intern applications.
+Personal portfolio for Backend Engineer opportunities.
 
 ## Run locally
 
@@ -28,5 +28,5 @@ In GitHub:
 
 - Replace `public/assets/avatar-placeholder.svg` with your real avatar.
 - Replace project thumbnails.
-- Add the real CV file at `public/HuynhGiaHan_BackendDeveloperIntern_CV.pdf`.
+- Keep the current resume at `public/HuynhGiaHan_Resume.pdf`.
 - Update GitHub/LinkedIn/proof links in `src/data`.

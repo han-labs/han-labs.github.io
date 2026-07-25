@@ -11,6 +11,7 @@ export function Footer() {
     { key: 'nav.projects', href: '#projects' },
     { key: 'nav.achievements', href: '#achievements' },
     { key: 'nav.beyond', href: '#beyond' },
+    { key: 'nav.certificates', href: '#certificates' },
     { key: 'nav.contact', href: '#contact' },
   ];
 

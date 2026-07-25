@@ -8,7 +8,7 @@ const sections = [
   { id: '#projects', labelKey: 'nav.projects' },
   { id: '#achievements', labelKey: 'nav.achievements' },
   { id: '#beyond', labelKey: 'nav.beyond' },
-  { id: '#certificates', labelKey: 'certificates.eyebrow' },
+  { id: '#certificates', labelKey: 'nav.certificates' },
   { id: '#contact', labelKey: 'nav.contact' },
 ];
 

@@ -15,8 +15,9 @@ const translations: Record<string, Record<Language, string>> = {
   'nav.about': { en: 'About', vi: 'Giới thiệu' },
   'nav.skills': { en: 'Skills', vi: 'Kỹ năng' },
   'nav.projects': { en: 'Projects', vi: 'Dự án' },
-  'nav.achievements': { en: 'Achievements', vi: 'Cột mốc' },
+  'nav.achievements': { en: 'Timeline', vi: 'Dòng thời gian' },
   'nav.beyond': { en: 'Beyond', vi: 'Bên lề' },
+  'nav.certificates': { en: 'Awards', vi: 'Giải thưởng' },
   'nav.contact': { en: 'Contact', vi: 'Liên hệ' },
 
   // Hero / General buttons
@@ -43,21 +44,23 @@ const translations: Record<string, Record<Language, string>> = {
   'projects.eyebrow': { en: 'Projects', vi: 'Dự án' },
   'projects.title': { en: 'Featured projects.', vi: 'Các dự án tiêu biểu.' },
 
-  'timeline.eyebrow': { en: 'Timeline', vi: 'Cột mốc' },
-  'timeline.title': { en: 'Achievements and milestones.', vi: 'Thành tựu và cột mốc học tập.' },
+  'timeline.eyebrow': { en: 'Timeline', vi: 'Dòng thời gian' },
+  'timeline.title': { en: 'Milestones through the years.', vi: 'Những cột mốc qua từng năm.' },
 
   'beyond.eyebrow': { en: 'Beyond the Code', vi: 'Bên ngoài code' },
   'beyond.title': { en: 'Stories from the journey', vi: 'Những câu chuyện trong hành trình' },
 
-  'certificates.eyebrow': { en: 'Certificates', vi: 'Chứng chỉ' },
-  'certificates.title': { en: 'Certificates & Credentials', vi: 'Chứng nhận & chứng chỉ' },
+  'certificates.eyebrow': { en: 'Recognition', vi: 'Ghi nhận' },
+  'certificates.title': { en: 'Awards & certifications.', vi: 'Giải thưởng & chứng nhận.' },
+  'certificates.hint': { en: 'Drag to explore · Auto-scrolling pauses while you interact', vi: 'Kéo để xem · Tự động dừng khi bạn tương tác' },
+  'certificates.view': { en: 'View', vi: 'Xem' },
 
   // Contact Section
   'contact.eyebrow': { en: 'Get in Touch', vi: 'Liên hệ' },
   'contact.title': { en: 'Let’s build something meaningful.', vi: 'Hãy cùng nhau xây dựng những giá trị ý nghĩa.' },
   'contact.desc': { 
-    en: 'I’m open to full-time Java Backend Internship opportunities from Monday to Friday, where I can contribute thoughtfully, learn from an experienced team, and grow by solving real product challenges.',
-    vi: 'Tôi sẵn sàng cho cơ hội thực tập Java Backend toàn thời gian từ thứ Hai đến thứ Sáu, nơi tôi có thể đóng góp chỉn chu, học hỏi từ đội ngũ giàu kinh nghiệm và phát triển qua những bài toán sản phẩm thực tế.'
+    en: 'I’m open to software development opportunities where I can contribute with care, learn from an experienced team, and grow through real product challenges.',
+    vi: 'Tôi sẵn sàng với các cơ hội phát triển phần mềm, nơi tôi có thể đóng góp bằng sự chỉn chu, học hỏi từ một đội ngũ giàu kinh nghiệm và trưởng thành qua những bài toán sản phẩm thực tế.'
   },
   'contact.location': { en: 'Location', vi: 'Địa điểm' },
   'contact.email': { en: 'Email', vi: 'Email' },
@@ -78,7 +81,7 @@ const translations: Record<string, Record<Language, string>> = {
   'article.close': { en: 'Close Article', vi: 'Đóng Bài viết' },
   'article.learned': { en: 'What I Learned', vi: 'Bài học kinh nghiệm' },
   'article.viewproof': { en: 'View Certificate →', vi: 'Xem Chứng nhận →' },
-  'article.readtime': { en: '3 min read', vi: '3 phút đọc' },
+  'article.readtime': { en: '4 min read', vi: '4 phút đọc' },
   'article.tag': { en: 'Journey', vi: 'Hành trình' },
 
   // Top Jump Dot

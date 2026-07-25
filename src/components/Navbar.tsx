@@ -7,6 +7,7 @@ const links = [
   { key: 'nav.projects', href: '#projects' },
   { key: 'nav.achievements', href: '#achievements' },
   { key: 'nav.beyond', href: '#beyond' },
+  { key: 'nav.certificates', href: '#certificates' },
   { key: 'nav.contact', href: '#contact' },
 ];
 
@@ -36,9 +37,9 @@ export function Navbar() {
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           {links.map((link) => (
-            <a key={link.href} className="text-[15px] font-semibold hover:underline text-ink" href={link.href}>
+            <a key={link.href} className="text-[13px] font-semibold hover:underline text-ink lg:text-sm" href={link.href}>
               {t(link.key)}
             </a>
           ))}

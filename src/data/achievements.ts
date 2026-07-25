@@ -1,40 +1,40 @@
 export const achievements = [
   {
-    year: '2023–2027',
+    year: '2023',
     items: [
       {
         en: {
-          title: 'B.Eng. in Information Technology',
-          description: 'HCMC University of Technology and Engineering (HCM-UTE) · GPA 3.3/4.0 · Expected graduation 2027.',
+          title: 'Started Information Technology at HCM-UTE',
+          description: 'Began the Information Technology program at HCM-UTE.',
         },
         vi: {
-          title: 'Kỹ sư Công nghệ Thông tin',
-          description: 'Trường Đại học Sư phạm Kỹ thuật TP.HCM (HCM-UTE) · GPA 3.3/4.0 · Dự kiến tốt nghiệp năm 2027.',
+          title: 'Bắt đầu học Công nghệ Thông tin tại HCM-UTE',
+          description: 'Bắt đầu theo học ngành Công nghệ Thông tin tại HCM-UTE.',
         },
       },
       {
         en: {
           title: 'UGO & Nguyen Truong To Scholarships',
-          description: 'Scholarship support for academic merit and determination from UGO, Saigonchildren, and VNHELP.',
+          description: 'Received scholarships from UGO, Saigonchildren, and VNHELP.',
         },
         vi: {
           title: 'Học bổng UGO & Nguyễn Trường Tộ',
-          description: 'Học bổng ghi nhận thành tích học tập và nghị lực từ UGO, Saigonchildren và VNHELP.',
+          description: 'Nhận học bổng từ UGO, Saigonchildren và VNHELP.',
         },
       },
     ],
   },
   {
-    year: '2024–2025',
+    year: '2024',
     items: [
       {
         en: {
-          title: 'Undergraduate Scientific Research',
-          description: 'Co-authored a report on high-resolution retinal vessel segmentation; rated “Very Good” at university level and reached the 2025 Eureka semifinals.',
+          title: 'Started Undergraduate Research',
+          description: 'Began research on retinal vessel segmentation.',
         },
         vi: {
-          title: 'Nghiên cứu khoa học sinh viên',
-          description: 'Đồng tác giả báo cáo về phân đoạn mạch máu võng mạc độ phân giải cao; đạt loại “Rất tốt” cấp trường và vào bán kết Eureka 2025.',
+          title: 'Bắt đầu nghiên cứu khoa học',
+          description: 'Nghiên cứu bài toán phân đoạn mạch máu võng mạc.',
         },
       },
     ],
@@ -44,12 +44,22 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'Digiworld “Uom Mam Xanh” Full Scholarship',
-          description: 'Full scholarship for the Backend Engineering Program.',
+          title: 'Research & Eureka',
+          description: 'Rated “Very Good” at HCM-UTE and reached the Eureka semifinal.',
         },
         vi: {
-          title: 'Học bổng toàn phần “Ươm Mầm Xanh”',
-          description: 'Học bổng toàn phần chương trình đào tạo Backend Engineering của Digiworld.',
+          title: 'Nghiên cứu & Eureka',
+          description: 'Đạt loại “Rất tốt” cấp trường và vào bán kết Eureka.',
+        },
+      },
+      {
+        en: {
+          title: 'Digiworld Full Scholarship',
+          description: 'Received a full Backend Engineering scholarship.',
+        },
+        vi: {
+          title: 'Học bổng toàn phần Digiworld',
+          description: 'Nhận học bổng toàn phần chương trình Backend Engineering.',
         },
       },
     ],
@@ -60,21 +70,21 @@ export const achievements = [
       {
         en: {
           title: 'STEM Mentor',
-          description: 'Supported STEM learning activities and guided students in the Empowering STEM Dreams project.',
+          description: 'Guided students in the Empowering STEM Dreams project.',
         },
         vi: {
           title: 'Cố vấn STEM',
-          description: 'Hỗ trợ hoạt động học tập STEM và hướng dẫn học sinh trong dự án Empowering STEM Dreams.',
+          description: 'Hướng dẫn học sinh trong dự án Empowering STEM Dreams.',
         },
       },
       {
         en: {
           title: 'AWS Cloud Club – HCMUTE',
-          description: 'Active member of the university cloud computing community.',
+          description: 'Joined the university cloud community.',
         },
         vi: {
           title: 'AWS Cloud Club – HCMUTE',
-          description: 'Thành viên cộng đồng điện toán đám mây tại trường.',
+          description: 'Tham gia cộng đồng điện toán đám mây tại trường.',
         },
       },
     ],

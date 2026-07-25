@@ -58,7 +58,7 @@ export function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader eyebrow={t('projects.eyebrow')} title={t('projects.title')} />
 
-      <div className="mt-5 grid gap-5 md:grid-cols-2">
+      <div className="mx-auto mt-5 grid max-w-5xl gap-5 md:grid-cols-2">
         {projects.map((project) => {
           const currentData = project[lang];
 
@@ -75,7 +75,7 @@ export function Projects() {
                   openProject(project);
                 }
               }}
-              className="brutal-card group flex h-full cursor-pointer flex-col overflow-hidden bg-paper transition-transform duration-200 hover:-translate-y-1 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-blue-pop"
+              className="brutal-card group flex h-full cursor-pointer flex-col overflow-hidden bg-paper transition-transform duration-200 hover:-translate-y-1 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-blue-pop md:h-[560px] lg:h-[550px]"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-ink bg-cream">
                 {project.image ? (
@@ -109,15 +109,20 @@ export function Projects() {
                   </span>
                 </div>
 
-                <p className="mt-3 text-sm font-normal leading-relaxed text-ink/80">{currentData.summary}</p>
-                <p className="mt-2 text-xs font-medium text-ink/65">{currentData.role}</p>
+                <p className="mt-3 line-clamp-2 text-sm font-normal leading-relaxed text-ink/80">{currentData.summary}</p>
+                <p className="mt-2 line-clamp-2 text-xs font-medium text-ink/65">{currentData.role}</p>
 
                 <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tech.map((tech) => (
+                  {project.tech.slice(0, 6).map((tech) => (
                     <span key={tech} className="border border-ink/25 bg-yellow-pop px-2 py-1 text-[9px] font-medium text-ink">
                       {tech}
                     </span>
                   ))}
+                  {project.tech.length > 6 ? (
+                    <span className="border border-ink/25 bg-cream px-2 py-1 text-[9px] font-medium text-ink/65">
+                      +{project.tech.length - 6}
+                    </span>
+                  ) : null}
                 </div>
 
                 <div className="mt-auto flex flex-wrap items-center gap-2 pt-5">
@@ -211,9 +216,40 @@ export function Projects() {
                   {activeProject.name}
                 </h3>
                 <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink/75 md:text-base">{activeCopy.summary}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <a
+                    href={activeProject.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="brutal-button bg-paper px-3 py-1.5 text-[11px] font-semibold text-ink"
+                  >
+                    GitHub ↗
+                  </a>
+                  {activeProject.live ? (
+                    <a
+                      href={activeProject.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="brutal-button bg-green-pop px-3 py-1.5 text-[11px] font-semibold text-ink"
+                    >
+                      {t('project.livedemo')} ↗
+                    </a>
+                  ) : null}
+                  {activeProject.resources.map((resource) => (
+                    <a
+                      key={resource.href}
+                      href={resource.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="brutal-button bg-blue-pop px-3 py-1.5 text-[11px] font-semibold text-ink"
+                    >
+                      {resource.label} ↗
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <div className="mt-7 grid gap-6 md:grid-cols-[0.7fr_1.3fr]">
+              <div className="mt-6 grid gap-6 md:grid-cols-[0.7fr_1.3fr]">
                 <section>
                   <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/55">
                     {t('project.role')}
@@ -259,42 +295,6 @@ export function Projects() {
                 </section>
               ) : null}
 
-              <section className="mt-7 border-t border-ink/15 pt-5">
-                <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/55">
-                  {t('project.resources')}
-                </h4>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <a
-                    href={activeProject.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="brutal-button bg-paper px-3 py-1.5 text-[11px] font-semibold text-ink"
-                  >
-                    GitHub ↗
-                  </a>
-                  {activeProject.live ? (
-                    <a
-                      href={activeProject.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="brutal-button bg-green-pop px-3 py-1.5 text-[11px] font-semibold text-ink"
-                    >
-                      {t('project.livedemo')} ↗
-                    </a>
-                  ) : null}
-                  {activeProject.resources.map((resource) => (
-                    <a
-                      key={resource.href}
-                      href={resource.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="brutal-button bg-blue-pop px-3 py-1.5 text-[11px] font-semibold text-ink"
-                    >
-                      {resource.label} ↗
-                    </a>
-                  ))}
-                </div>
-              </section>
             </div>
           </article>
         </div>
