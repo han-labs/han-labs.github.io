@@ -22,7 +22,9 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
-        <Contributions />
+        <div className="hidden">
+          <Contributions />
+        </div>
         <Projects />
         <Timeline />
         <BeyondCode />

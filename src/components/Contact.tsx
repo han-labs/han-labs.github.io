@@ -32,6 +32,12 @@ export function Contact() {
                   {profile.email}
                 </a>
               </div>
+              <div className="text-ink/65">
+                {t('contact.eduemail')}:{' '}
+                <a className="break-all underline hover:text-ink/75" href={`mailto:${profile.educationEmail}`}>
+                  {profile.educationEmail}
+                </a>
+              </div>
             </div>
           </div>
 

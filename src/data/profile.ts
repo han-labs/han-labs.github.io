@@ -1,22 +1,24 @@
 export const profile = {
   name: 'Huynh Gia Han',
-  email: '23110019@student.hcmute.edu.vn',
+  email: 'hgiahan.it@gmail.com',
+  educationEmail: '23110019@student.hcmute.edu.vn',
   github: 'https://github.com/han-labs',
   linkedin: 'https://www.linkedin.com/in/huynh-gia-han',
+  portfolio: 'https://han-labs.github.io/',
   cv: '/HuynhGiaHan_BackendDeveloperIntern_CV.pdf',
   avatar: '/assets/avatar.png',
   en: {
-    role: 'Software Engineer',
+    role: 'Java Backend Intern',
     location: 'Thu Duc, Ho Chi Minh City',
-    heroLine: 'I build software where thoughtful engineering\nmeets real-world impact.',
-    about: 'I am a final-year Information Technology student at Ho Chi Minh City University of Technology and Engineering - HCM-UTE. I focus on Java backend development with Spring Boot and enjoy turning requirements into clear, maintainable software. Through academic and personal projects, I have strengthened my foundations in object-oriented programming, relational databases, API design, teamwork, and continuous learning.',
-    highlights: ['HCM-UTE · Information Technology', 'GPA 3.3/4.0']
+    heroLine: 'Building reliable Java backends with clear architecture\nand thoughtful engineering.',
+    about: 'Final-year Information Technology student focused on Java backend development, with hands-on experience building RESTful applications through academic, team, and personal projects. Skilled in Spring Boot, Spring Security, JPA, relational databases, Git-based collaboration, and technical documentation. Demonstrated commitment to continuous learning through scholarship-supported training and undergraduate research. Available for full-time work from Monday to Friday.',
+    highlights: ['HCM-UTE · Information Technology', 'GPA 3.3/4.0'],
   },
   vi: {
-    role: 'Kỹ sư phần mềm',
+    role: 'Thực tập sinh Java Backend',
     location: 'Thủ Đức, Thành phố Hồ Chí Minh',
-    heroLine: 'Tôi thích biến các ý tưởng thành phần mềm hữu ích và tích luỹ kinh nghiệm qua từng vấn đề được giải quyết.',
-    about: 'Sinh viên năm cuối ngành Công nghệ Thông tin tại Trường Đại học Sư phạm Kỹ thuật TP.HCM (HCMUTE), định hướng phát triển Java Backend với Spring Boot. Tôi yêu thích việc chuyển đổi yêu cầu thực tế thành các giải pháp phần mềm tối ưu, dễ bảo trì và có kiến trúc rõ ràng. Qua các dự án cá nhân và học thuật, tôi đã củng cố cho mình nền tảng lập trình hướng đối tượng, cơ sở dữ liệu quan hệ, thiết kế API, làm việc nhóm và tinh thần học hỏi không ngừng.',
-    highlights: ['HCM-UTE · Công nghệ Thông tin', 'GPA 3.3/4.0']
-  }
+    heroLine: 'Xây dựng hệ thống Java Backend đáng tin cậy\nvới kiến trúc rõ ràng và tư duy kỹ thuật chỉn chu.',
+    about: 'Sinh viên năm cuối ngành Công nghệ Thông tin, tập trung phát triển Java Backend và có kinh nghiệm thực hành xây dựng ứng dụng RESTful qua các dự án học thuật, dự án nhóm và dự án cá nhân. Thành thạo Spring Boot, Spring Security, JPA, cơ sở dữ liệu quan hệ, cộng tác với Git và viết tài liệu kỹ thuật. Tôi duy trì tinh thần học hỏi liên tục thông qua các chương trình đào tạo được hỗ trợ bởi học bổng và hoạt động nghiên cứu khoa học sinh viên. Có thể làm việc toàn thời gian từ thứ Hai đến thứ Sáu.',
+    highlights: ['HCM-UTE · Công nghệ Thông tin', 'GPA 3.3/4.0'],
+  },
 };

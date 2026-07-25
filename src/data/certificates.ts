@@ -10,44 +10,44 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
-    name: 'AWS Academy Cloud Foundations',
-    issuer: 'AWS Academy',
-    date: '2025',
-    proof: '#todo-aws-cloud-foundations',
-    image: '/certificates/aws-cloud-foundations.png',
-  },
-  {
-    name: 'AWS Academy Cloud Web Application Builder',
-    issuer: 'AWS Academy',
-    date: '2025',
-    proof: '#todo-aws-cloud-web-builder',
-    image: '/certificates/aws-web-builder.png',
-  },
-  {
-    name: 'AWS Academy Machine Learning for Natural Language Processing',
-    issuer: 'AWS Academy',
-    date: '2025',
-    proof: '#todo-aws-ml-nlp',
-    image: '/certificates/aws-ml-nlp.png',
-  },
-  {
-    name: 'Development and Operations System Course',
-    issuer: 'VTI Academy',
-    date: '2025',
-    proof: '#todo-vti-devops',
-  },
-  {
-    name: 'Agile/Scrum Training Certificate',
-    issuer: 'Axon Active',
-    en: {
-      name: 'Agile/Scrum Training Certificate',
-      issuer: 'Axon Active',
-    },
+    name: 'EF SET English Certificate, C1',
+    issuer: 'EF SET',
+    date: 'Jul 2026',
+    proof: '#todo-ef-set-c1',
     vi: {
-      name: 'Chứng chỉ Đào tạo Agile/Scrum',
+      name: 'Chứng chỉ tiếng Anh EF SET, C1',
+      issuer: 'EF SET',
+    },
+  },
+  {
+    name: 'Software Development With Scrum Certificate',
+    issuer: 'Axon Active',
+    date: 'May 2026',
+    proof: '#todo-scrum',
+    vi: {
+      name: 'Chứng chỉ Phát triển phần mềm với Scrum',
       issuer: 'Axon Active',
     },
-    date: '2026',
-    proof: '#todo-agile-scrum',
+  },
+  {
+    name: 'Development and Operations System Program',
+    issuer: 'VTI Academy',
+    date: 'Dec 2025',
+    proof: '#todo-vti-devops',
+    vi: {
+      name: 'Chương trình Development and Operations System',
+      issuer: 'VTI Academy',
+    },
+  },
+  {
+    name: 'Cloud Foundations & Cloud Web Application Builder',
+    issuer: 'AWS Academy',
+    date: 'Oct 2025',
+    proof: '#todo-aws-cloud',
+    image: '/certificates/aws-cloud-foundations.png',
+    vi: {
+      name: 'Cloud Foundations & Cloud Web Application Builder',
+      issuer: 'AWS Academy',
+    },
   },
 ];

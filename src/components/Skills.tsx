@@ -3,11 +3,18 @@ import { SectionHeader } from './SectionHeader';
 import { useLanguage } from '../context/LanguageContext';
 
 const GROUP_TRANSLATIONS: Record<string, Record<string, string>> = {
-  'Java & Spring': { en: 'Java & Spring', vi: 'Java & Spring' },
-  'Backend Foundations': { en: 'Backend Foundations', vi: 'Nền tảng Backend' },
+  'Languages': { en: 'Languages', vi: 'Ngôn ngữ' },
+  'Backend': { en: 'Backend', vi: 'Backend' },
   'Databases': { en: 'Databases', vi: 'Cơ sở dữ liệu' },
-  'Development Tools': { en: 'Development Tools', vi: 'Công cụ phát triển' },
-  'Delivery & Collaboration': { en: 'Delivery & Collaboration', vi: 'Triển khai & Cộng tác' }
+  'Tools & Practices': { en: 'Tools & Practices', vi: 'Công cụ & Quy trình' },
+  'Additional': { en: 'Additional', vi: 'Bổ sung' },
+  'Spoken Languages': { en: 'Languages', vi: 'Ngoại ngữ' },
+};
+
+const ITEM_TRANSLATIONS: Record<string, Record<string, string>> = {
+  'Vietnamese · Native': { en: 'Vietnamese · Native', vi: 'Tiếng Việt · Bản ngữ' },
+  'English · C1 (EF SET)': { en: 'English · C1 (EF SET)', vi: 'Tiếng Anh · C1 (EF SET)' },
+  'Japanese · Basic': { en: 'Japanese · Basic', vi: 'Tiếng Nhật · Cơ bản' },
 };
 
 export function Skills() {
@@ -32,7 +39,7 @@ export function Skills() {
                     key={item}
                     className="border border-ink/20 bg-cream px-2 py-1 text-[10px] font-normal text-ink"
                   >
-                    {item}
+                    {ITEM_TRANSLATIONS[item]?.[lang] ?? item}
                   </span>
                 ))}
               </div>

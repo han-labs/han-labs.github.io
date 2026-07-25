@@ -56,14 +56,22 @@ const translations: Record<string, Record<Language, string>> = {
   'contact.eyebrow': { en: 'Get in Touch', vi: 'Liên hệ' },
   'contact.title': { en: 'Let’s build something meaningful.', vi: 'Hãy cùng nhau xây dựng những giá trị ý nghĩa.' },
   'contact.desc': { 
-    en: 'I’m open to Software Developer Internship opportunities where I can contribute thoughtfully, learn from an experienced team, and grow by solving real product challenges.',
-    vi: 'Tôi đang tìm kiếm cơ hội Thực tập sinh Kỹ sư Phần mềm để đóng góp bằng sự tận tụy, học hỏi từ đội ngũ giàu kinh nghiệm và phát triển bản thân qua những thử thách sản phẩm thực tế.' 
+    en: 'I’m open to full-time Java Backend Internship opportunities from Monday to Friday, where I can contribute thoughtfully, learn from an experienced team, and grow by solving real product challenges.',
+    vi: 'Tôi sẵn sàng cho cơ hội thực tập Java Backend toàn thời gian từ thứ Hai đến thứ Sáu, nơi tôi có thể đóng góp chỉn chu, học hỏi từ đội ngũ giàu kinh nghiệm và phát triển qua những bài toán sản phẩm thực tế.'
   },
   'contact.location': { en: 'Location', vi: 'Địa điểm' },
   'contact.email': { en: 'Email', vi: 'Email' },
+  'contact.eduemail': { en: 'Education email', vi: 'Email trường' },
 
   // Project cards
   'project.livedemo': { en: 'Live Demo', vi: 'Xem chạy thử' },
+  'project.readcase': { en: 'Read case study', vi: 'Xem chi tiết dự án' },
+  'project.role': { en: 'Role', vi: 'Vai trò' },
+  'project.contribution': { en: 'My contribution', vi: 'Đóng góp của tôi' },
+  'project.stack': { en: 'Tech stack', vi: 'Công nghệ sử dụng' },
+  'project.gallery': { en: 'Project gallery', vi: 'Hình ảnh dự án' },
+  'project.resources': { en: 'Project links', vi: 'Liên kết dự án' },
+  'project.close': { en: 'Close project', vi: 'Đóng dự án' },
   
   // Articles Modal / Cards
   'article.read': { en: 'Read Article', vi: 'Đọc Bài viết' },

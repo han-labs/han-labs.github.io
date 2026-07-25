@@ -34,7 +34,7 @@ export function Certificates() {
     <section id="certificates" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader eyebrow={t('certificates.eyebrow')} title={t('certificates.title')} />
 
-      <div className="scrollbar-thin mt-5 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+      <div className="scrollbar-thin mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
         {certificates.map((certificate) => {
           const localized = getLocalizedCopy(certificate);
 
@@ -43,25 +43,25 @@ export function Certificates() {
               key={localized.name}
               type="button"
               onClick={() => setActiveCertificate(certificate)}
-              className="brutal-card-sm group w-[82vw] max-w-[340px] shrink-0 snap-start cursor-zoom-in overflow-hidden bg-paper text-left transition-transform duration-200 hover:-translate-y-1"
+              className="brutal-card-sm group w-[72vw] max-w-[280px] shrink-0 snap-start cursor-zoom-in overflow-hidden bg-paper text-left transition-transform duration-200 hover:-translate-y-1"
             >
               {certificate.image ? (
                 <img
                   src={certificate.image}
                   alt={localized.name}
-                  className="aspect-[4/3] w-full border-b border-ink object-cover"
+                  className="aspect-[16/10] w-full border-b border-ink object-cover"
                 />
               ) : (
-                <div className="flex aspect-[4/3] w-full flex-col items-center justify-center border-b border-ink bg-cream p-6 text-center">
+                <div className="flex aspect-[16/10] w-full flex-col items-center justify-center border-b border-ink bg-cream p-4 text-center">
                   <span className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-ink/55">
                     {localized.issuer}
                   </span>
-                  <span className="mt-3 text-lg font-semibold leading-snug text-ink">{localized.name}</span>
+                  <span className="mt-2 text-base font-semibold leading-snug text-ink">{localized.name}</span>
                 </div>
               )}
 
-              <div className="p-4">
-                <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-ink md:text-[15px]">
+              <div className="p-3">
+                <h3 className="line-clamp-2 text-xs font-semibold leading-snug text-ink md:text-sm">
                   {localized.name}
                 </h3>
                 <div className="mt-2 flex items-center justify-between gap-4 text-[11px] text-ink/65">
