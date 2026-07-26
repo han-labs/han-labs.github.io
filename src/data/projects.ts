@@ -79,6 +79,7 @@ export const projects: Project[] = [
     slug: 'pocket',
     name: 'Pocket',
     tech: ['Java', 'Android SDK', 'MVVM', 'Firebase', 'CameraX', 'Cloudinary', 'Retrofit', 'OkHttp'],
+    image: '/assets/pocket-thumbnail.png',
     github: 'https://github.com/FlynnBui399/MOPR-NHOM03',
     resources: [],
     gallery: [],

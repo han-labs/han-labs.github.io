@@ -28,7 +28,9 @@ export function Skills() {
           return (
             <div
               key={skill.group}
-              className="flex items-center gap-3 border-b border-ink/10 pb-2.5 last:border-0"
+              className={`flex items-center gap-3 pb-2.5 ${
+                skill.group === 'Additional' ? '' : 'border-b border-ink/10 last:border-0'
+              }`}
             >
               <span className="w-24 shrink-0 text-[11px] font-bold uppercase tracking-wider text-ink md:w-28">
                 {translatedGroup}

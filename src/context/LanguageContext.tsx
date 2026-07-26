@@ -17,7 +17,7 @@ const translations: Record<string, Record<Language, string>> = {
   'nav.projects': { en: 'Projects', vi: 'Dự án' },
   'nav.achievements': { en: 'Timeline', vi: 'Dòng thời gian' },
   'nav.beyond': { en: 'Beyond', vi: 'Bên lề' },
-  'nav.certificates': { en: 'Awards', vi: 'Giải thưởng' },
+  'nav.certificates': { en: 'Achievements', vi: 'Thành tựu' },
   'nav.contact': { en: 'Contact', vi: 'Liên hệ' },
 
   // Hero / General buttons
@@ -50,8 +50,11 @@ const translations: Record<string, Record<Language, string>> = {
   'beyond.eyebrow': { en: 'Beyond the Code', vi: 'Bên ngoài code' },
   'beyond.title': { en: 'Stories from the journey', vi: 'Những câu chuyện trong hành trình' },
 
-  'certificates.eyebrow': { en: 'Recognition', vi: 'Ghi nhận' },
-  'certificates.title': { en: 'Awards & certifications.', vi: 'Giải thưởng & chứng nhận.' },
+  'certificates.eyebrow': { en: 'Achievements', vi: 'Thành tựu' },
+  'certificates.title': { en: 'Awards, scholarships & certifications.', vi: 'Giải thưởng, học bổng & chứng nhận.' },
+  'certificates.kind.award': { en: 'Award', vi: 'Giải thưởng' },
+  'certificates.kind.scholarship': { en: 'Scholarship', vi: 'Học bổng' },
+  'certificates.kind.certificate': { en: 'Certificate', vi: 'Chứng nhận' },
   'certificates.hint': { en: 'Drag to explore · Auto-scrolling pauses while you interact', vi: 'Kéo để xem · Tự động dừng khi bạn tương tác' },
   'certificates.view': { en: 'View', vi: 'Xem' },
 

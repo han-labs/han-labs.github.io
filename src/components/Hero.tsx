@@ -20,11 +20,11 @@ export function Hero() {
       {/* Intro Card with Dashed Border */}
       <div className="brutal-dashed-card flex h-full flex-col p-5 md:p-6">
         <div>
-          <h1 className="section-title text-3xl font-bold leading-tight text-ink sm:text-4xl md:text-[42px]">
+          <h1 className="section-title text-4xl font-bold leading-[1.02] text-ink sm:text-5xl md:text-[56px]">
             {profile.name}
           </h1>
-          <p className="mt-2 text-base font-semibold text-ink">{currentProfile.role}</p>
-          <p className="mt-3.5 max-w-2xl whitespace-pre-line text-sm font-normal leading-relaxed text-ink/90 md:text-[15px]">
+          <p className="mt-2.5 text-lg font-semibold text-ink md:text-xl">{currentProfile.role}</p>
+          <p className="mt-4 max-w-2xl whitespace-pre-line text-base font-normal leading-relaxed text-ink/90 md:text-lg">
             {currentProfile.heroLine}
           </p>
         </div>

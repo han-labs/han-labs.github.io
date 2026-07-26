@@ -36,7 +36,7 @@ export function BeyondCode() {
                   <span className="select-none border border-ink bg-blue-pop px-2 py-0.5 text-[10px] font-bold text-ink">
                     {t('article.tag')}
                   </span>
-                  <span className="text-[10px] font-bold text-ink/70">{t('article.readtime')}</span>
+                  <span className="text-[10px] font-bold text-ink/70">{currentArticle.readTime}</span>
                 </div>
                 <h3 className="text-base font-semibold text-ink hover:underline md:text-lg">
                   {currentArticle.title}
@@ -84,8 +84,19 @@ export function BeyondCode() {
                 <span className="border-2 border-ink bg-blue-pop px-2.5 py-0.5 text-xs font-black text-ink select-none">
                   {t('article.tag')}
                 </span>
-                <span className="text-xs font-bold text-ink/70">{t('article.readtime')}</span>
+                <span className="text-xs font-bold text-ink/70">{activeArticle.readTime}</span>
               </div>
+              {activeArticle.featureUrl && activeArticle.featureLabel && (
+                <a
+                  href={activeArticle.featureUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-4 inline-flex items-center gap-2 border-2 border-ink bg-yellow-pop px-3 py-2 text-xs font-bold text-ink shadow-[3px_3px_0_var(--color-line)] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--color-line)]"
+                >
+                  {activeArticle.featureLabel}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              )}
               <h3 className="text-xl md:text-2xl font-black text-ink leading-tight mb-4">
                 {activeArticle.title}
               </h3>
@@ -95,15 +106,73 @@ export function BeyondCode() {
               </p>
             </div>
 
+            {activeArticle.image && (
+              <figure className="mb-5 overflow-hidden border-2 border-ink bg-cream">
+                <img
+                  src={activeArticle.image}
+                  alt={activeArticle.imageAlt ?? ''}
+                  className="aspect-[16/10] w-full object-cover"
+                />
+                {activeArticle.imageCaption && (
+                  <figcaption className="border-t-2 border-ink px-3 py-2 text-[10px] font-medium leading-relaxed text-ink/70 md:text-xs">
+                    {activeArticle.imageCaption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
+
             {/* Modal Sections */}
             <div className="space-y-4 mt-4 text-ink">
               {activeArticle.sections.map((section, idx) => (
-                <div key={idx} className="space-y-1">
+                <section key={idx} className="space-y-2">
                   <h4 className="text-sm md:text-base font-black">{section.heading}</h4>
-                  <p className="text-xs md:text-sm font-semibold leading-relaxed text-ink/85">
-                    {section.content}
-                  </p>
-                </div>
+                  {section.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="text-xs font-medium leading-relaxed text-ink/85 md:text-sm"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                  {section.image && (
+                    <figure className="my-3 overflow-hidden border-2 border-ink bg-cream">
+                      <img
+                        src={section.image}
+                        alt={section.imageAlt ?? ''}
+                        className="aspect-[16/10] w-full object-cover"
+                      />
+                      {section.imageCaption && (
+                        <figcaption className="border-t-2 border-ink px-3 py-2 text-[10px] font-medium leading-relaxed text-ink/70 md:text-xs">
+                          {section.imageCaption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                  {section.quote && (
+                    <blockquote className="border-l-[3px] border-blue-pop bg-cream px-3 py-2 text-xs font-semibold italic leading-relaxed text-ink/85 md:text-sm">
+                      {section.quote}
+                    </blockquote>
+                  )}
+                  {section.steps && (
+                    <div
+                      className="flex flex-wrap items-center gap-1.5 pt-1"
+                      aria-label={section.steps.join(' to ')}
+                    >
+                      {section.steps.map((step, stepIndex) => (
+                        <div key={step} className="flex items-center gap-1.5">
+                          <span className="border border-ink/30 bg-blue-pop/30 px-2 py-1 font-mono text-[10px] font-semibold text-ink md:text-xs">
+                            {step}
+                          </span>
+                          {stepIndex < section.steps!.length - 1 && (
+                            <span className="font-mono text-xs text-ink/45" aria-hidden="true">
+                              →
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </section>
               ))}
             </div>
 

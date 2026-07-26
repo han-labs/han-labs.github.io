@@ -3,6 +3,12 @@ import { Certificate, certificates } from '../data/certificates';
 import { SectionHeader } from './SectionHeader';
 import { useLanguage } from '../context/LanguageContext';
 
+const KIND_STYLES: Record<Certificate['kind'], string> = {
+  award: 'bg-pink-pop',
+  scholarship: 'bg-yellow-pop',
+  certificate: 'bg-blue-pop',
+};
+
 export function Certificates() {
   const { lang, t } = useLanguage();
   const [activeCertificate, setActiveCertificate] = useState<Certificate | null>(null);
@@ -86,20 +92,18 @@ export function Certificates() {
               onClick={() => setActiveCertificate(certificate)}
               className="brutal-card-sm group w-[72vw] max-w-[280px] shrink-0 snap-start cursor-zoom-in overflow-hidden bg-paper text-left transition-transform duration-200 hover:-translate-y-1"
             >
-              {certificate.image ? (
+              <div className="relative border-b border-ink bg-cream">
                 <img
                   src={certificate.image}
                   alt={localized.name}
-                  className="aspect-[16/10] w-full border-b border-ink bg-cream object-contain p-1"
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[16/10] w-full object-contain p-1"
                 />
-              ) : (
-                <div className="flex aspect-[16/10] w-full flex-col items-center justify-center border-b border-ink bg-cream p-4 text-center">
-                  <span className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-ink/55">
-                    {localized.issuer}
-                  </span>
-                  <span className="mt-2 text-base font-semibold leading-snug text-ink">{localized.name}</span>
-                </div>
-              )}
+                <span className={`absolute left-2 top-2 border border-ink px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-ink ${KIND_STYLES[certificate.kind]}`}>
+                  {t(`certificates.kind.${certificate.kind}`)}
+                </span>
+              </div>
 
               <div className="p-3">
                 <h3 className="line-clamp-2 text-xs font-semibold leading-snug text-ink md:text-sm">
@@ -138,25 +142,17 @@ export function Certificates() {
               ×
             </button>
 
-            {activeCertificate.image ? (
-              <img
-                src={activeCertificate.image}
-                alt={activeCopy.name}
-                className="max-h-[72vh] w-full bg-cream object-contain"
-              />
-            ) : (
-              <div className="flex min-h-[55vh] w-full flex-col items-center justify-center bg-cream p-8 text-center">
-                <span className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-ink/55">
-                  {activeCopy.issuer}
-                </span>
-                <span className="mt-4 max-w-2xl text-2xl font-semibold leading-snug text-ink md:text-4xl">
-                  {activeCopy.name}
-                </span>
-              </div>
-            )}
+            <img
+              src={activeCertificate.image}
+              alt={activeCopy.name}
+              className="max-h-[72vh] w-full bg-cream object-contain"
+            />
 
             <div className="flex flex-col gap-1 px-1 pb-1 pt-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
+                <span className={`mb-2 inline-block border border-ink px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-ink ${KIND_STYLES[activeCertificate.kind]}`}>
+                  {t(`certificates.kind.${activeCertificate.kind}`)}
+                </span>
                 <h3 className="text-lg font-semibold text-ink">{activeCopy.name}</h3>
                 <p className="mt-1 text-sm text-ink/65">{activeCopy.issuer}</p>
               </div>

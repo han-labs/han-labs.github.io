@@ -4,22 +4,22 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'Started Information Technology at HCM-UTE',
-          description: 'Began the Information Technology program at HCM-UTE.',
+          title: 'Information Technology at HCM-UTE',
+          description: 'Started my undergraduate journey.',
         },
         vi: {
-          title: 'Bắt đầu học Công nghệ Thông tin tại HCM-UTE',
-          description: 'Bắt đầu theo học ngành Công nghệ Thông tin tại HCM-UTE.',
+          title: 'Công nghệ Thông tin tại HCM-UTE',
+          description: 'Bắt đầu hành trình đại học.',
         },
       },
       {
         en: {
           title: 'UGO & Nguyen Truong To Scholarships',
-          description: 'Received scholarships from UGO, Saigonchildren, and VNHELP.',
+          description: 'Received scholarships for academic merit and determination.',
         },
         vi: {
           title: 'Học bổng UGO & Nguyễn Trường Tộ',
-          description: 'Nhận học bổng từ UGO, Saigonchildren và VNHELP.',
+          description: 'Nhận học bổng ghi nhận thành tích và nghị lực học tập.',
         },
       },
     ],
@@ -30,11 +30,11 @@ export const achievements = [
       {
         en: {
           title: 'Started Undergraduate Research',
-          description: 'Began research on retinal vessel segmentation.',
+          description: 'Explored retinal vessel segmentation through a university project.',
         },
         vi: {
           title: 'Bắt đầu nghiên cứu khoa học',
-          description: 'Nghiên cứu bài toán phân đoạn mạch máu võng mạc.',
+          description: 'Nghiên cứu phân đoạn mạch máu võng mạc trong một đề tài cấp trường.',
         },
       },
     ],
@@ -49,7 +49,7 @@ export const achievements = [
         },
         vi: {
           title: 'Nghiên cứu & Eureka',
-          description: 'Đạt loại “Rất tốt” cấp trường và vào bán kết Eureka.',
+          description: 'Đạt loại “Rất tốt” tại HCM-UTE và vào bán kết Eureka.',
         },
       },
       {
@@ -79,12 +79,27 @@ export const achievements = [
       },
       {
         en: {
-          title: 'AWS Cloud Club – HCMUTE',
-          description: 'Joined the university cloud community.',
+          title: 'NLP Research in Progress',
+          description: 'Studying fine-grained emotion recognition in Vietnamese social media text.',
         },
         vi: {
-          title: 'AWS Cloud Club – HCMUTE',
-          description: 'Tham gia cộng đồng điện toán đám mây tại trường.',
+          title: 'Nghiên cứu NLP đang thực hiện',
+          description: 'Nghiên cứu nhận diện cảm xúc trên văn bản mạng xã hội tiếng Việt.',
+        },
+      },
+    ],
+  },
+  {
+    year: '2027',
+    items: [
+      {
+        en: {
+          title: 'Expected Graduation',
+          description: 'Expected to graduate from HCM-UTE.',
+        },
+        vi: {
+          title: 'Dự kiến tốt nghiệp',
+          description: 'Dự kiến hoàn thành chương trình tại HCM-UTE.',
         },
       },
     ],
