@@ -24,10 +24,10 @@ export type JourneyArticle = {
   vi: LocalizedJourneyArticle;
 };
 
-export const beyondCodeItems: JourneyArticle[] = [
+const journeyArticles: JourneyArticle[] = [
   {
     en: {
-      title: 'Returning to the Classroom as a STEM Mentor',
+      title: 'Returning to the classroom as a STEM mentor',
       excerpt: 'A meaningful return to secondary school as a mentor, inspirational speaker, and co-judge for hands-on STEM projects.',
       intro: 'Returning to a secondary school felt familiar, but my role was completely new. I was no longer the student discovering technology for the first time; I was there to help younger students build, ask questions, and believe that STEM could become part of their own future.',
       readTime: '4 min read',
@@ -95,7 +95,7 @@ export const beyondCodeItems: JourneyArticle[] = [
   },
   {
     en: {
-      title: 'My Journey into True Software Engineering',
+      title: 'My journey into true software engineering',
       excerpt: 'How requirements, system design, traceability, and team leadership changed the way I think about building software.',
       intro: 'I used to think software development was a race to the finish line: read the requirements, start coding, fix bugs, and deliver. If the application worked, I considered it a success. Looking back at my recent software engineering project, I realize how incomplete that perspective was. I walked in as a programmer, but I walked out with the mindset of an engineer.',
       readTime: '6 min read',
@@ -185,7 +185,7 @@ export const beyondCodeItems: JourneyArticle[] = [
   },
   {
     en: {
-      title: 'Leaning Into the Unknown: From Fearing Code to Embracing AI',
+      title: 'Leaning into the unknown: from fearing code to embracing AI',
       excerpt: 'How fear became curiosity—from struggling with programming to joining AI research and learning to work across disciplines.',
       intro: 'If you had told my middle school self that I would one day study Software Engineering—let alone take part in Artificial Intelligence research—I would not have believed you. Programming once felt impossibly difficult, but choosing to face that fear became the first step toward the path I follow today.',
       readTime: '7 min read',
@@ -275,7 +275,7 @@ export const beyondCodeItems: JourneyArticle[] = [
   },
   {
     en: {
-      title: 'A New Milestone: The 9th Chien Hsing Scholarship',
+      title: 'A new milestone: the 9th Chien Hsing scholarship',
       excerpt: 'Recognition for learning, perseverance, and research—and encouragement to continue growing through academic exchange and community contribution.',
       intro: 'Receiving the 9th Chien Hsing Industrial Technology Scholarship on 23 October 2026 marked a meaningful milestone in my university journey. I see it as both recognition of the work so far and encouragement to keep learning, contributing, and exploring new academic connections.',
       readTime: '3 min read',
@@ -352,3 +352,6 @@ export const beyondCodeItems: JourneyArticle[] = [
     },
   },
 ];
+
+// Latest scholarship, mentoring, AI research, then software engineering reflection.
+export const beyondCodeItems = [journeyArticles[3], journeyArticles[0], journeyArticles[2], journeyArticles[1]];

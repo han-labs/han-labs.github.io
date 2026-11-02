@@ -38,11 +38,11 @@ export function Timeline() {
                     {yearGroup.year}
                   </span>
                   
-                  <div className="space-y-2.5 w-full flex flex-col items-center">
+                  <div className="space-y-2 w-full flex flex-col items-center">
                     {yearGroup.items.map((item, itemIdx) => {
                       const currentItem = item[lang];
                       return (
-                        <div key={itemIdx} className="flex flex-col items-center max-w-[170px]">
+                        <div key={itemIdx} className="flex flex-col items-center max-w-[190px]">
                           <h4 className="text-xs font-semibold leading-tight text-ink">
                             {currentItem.title}
                           </h4>

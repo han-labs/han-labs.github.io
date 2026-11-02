@@ -11,7 +11,7 @@ export type Certificate = {
   vi?: { name: string; issuer: string };
 };
 
-export const certificates: Certificate[] = [
+const certificateEntries: Certificate[] = [
   {
     name: 'TOEIC Listening & Reading · 785/990',
     issuer: 'ETS · IIG Vietnam',
@@ -162,3 +162,15 @@ export const certificates: Certificate[] = [
     image: '/certificates/aws-cloud-foundations-cert.png',
   },
 ];
+
+const featuredOrder = [
+  '/certificates/toeic-785.png',
+  '/awards/chien-hsing-scholarship-2026.jpg',
+  '/certificates/eureka_cert.jpg',
+  '/certificates/nckh-cert.jpg',
+];
+const certificatePriority = (item: Certificate) => {
+  const index = featuredOrder.indexOf(item.image);
+  return index < 0 ? featuredOrder.length : index;
+};
+export const certificates = [...certificateEntries].sort((a, b) => certificatePriority(a) - certificatePriority(b));

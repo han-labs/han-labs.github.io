@@ -91,7 +91,7 @@ body {
 }
 
 main section[id] {
-  scroll-margin-top: 6.5rem;
+  scroll-margin-top: 8rem;
 }
 
 .ambient-scene {
@@ -102,6 +102,50 @@ main section[id] {
   pointer-events: none;
   background: linear-gradient(180deg, rgba(218, 235, 240, 0.76) 0%, rgba(255, 247, 223, 0.58) 58%, rgba(242, 223, 170, 0.42) 100%);
   transition: background 1.2s ease;
+}
+
+.manual-rail {
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-yellow-pop) var(--color-paper);
+  cursor: grab;
+  user-select: none;
+}
+.manual-rail:active { cursor: grabbing; }
+.manual-rail::-webkit-scrollbar { height: 8px; }
+.manual-rail::-webkit-scrollbar-track { background: var(--color-paper); }
+.manual-rail::-webkit-scrollbar-thumb { background: var(--color-yellow-pop); border-radius: 6px; }
+
+.daytime-birds { position: absolute; inset: 0; opacity: 0.42; transition: opacity 0.8s ease; }
+[data-theme="dark"] .daytime-birds { opacity: 0; }
+.daytime-bird {
+  position: absolute;
+  left: -3rem;
+  display: flex;
+  animation: bird-flight 34s linear infinite;
+}
+.daytime-bird i {
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-top: 1.5px solid #52747c;
+  border-radius: 50%;
+  transform-origin: right center;
+  animation: bird-wing 1.1s ease-in-out infinite alternate;
+}
+.daytime-bird i + i { transform-origin: left center; animation-direction: alternate-reverse; }
+[data-theme="dark"] .daytime-bird,
+[data-theme="dark"] .daytime-bird i { animation-play-state: paused; }
+@keyframes bird-flight {
+  0% { translate: -3rem 0; }
+  50% { translate: 50vw -1.5rem; }
+  100% { translate: calc(100vw + 6rem) 0.5rem; }
+}
+@keyframes bird-wing { from { rotate: -13deg; } to { rotate: 13deg; } }
+@media (prefers-reduced-motion: reduce) {
+  .daytime-bird, .daytime-bird i { animation: none; }
+  .daytime-birds { display: none; }
 }
 
 [data-theme="dark"] .ambient-scene {
@@ -440,7 +484,7 @@ main section[id] {
   }
 
   main section[id] {
-    scroll-margin-top: 5.75rem;
+    scroll-margin-top: 8rem;
   }
 
   .celestial-orbit {

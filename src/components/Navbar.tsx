@@ -37,7 +37,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           {links.map((link) => (
             <a key={link.href} className="text-[13px] font-semibold hover:underline text-ink lg:text-sm" href={link.href}>
               {t(link.key)}
@@ -67,6 +67,9 @@ export function Navbar() {
             {theme === 'light' ? '☾' : '☀'}
           </button>
         </div>
+      </nav>
+      <nav aria-label={lang === 'en' ? 'Section navigation' : 'Điều hướng các mục'} className="flex gap-4 overflow-x-auto whitespace-nowrap px-4 pb-2 text-xs text-ink lg:hidden">
+        {links.map((link) => <a key={link.href} href={link.href} className="shrink-0 py-1 hover:underline">{t(link.key)}</a>)}
       </nav>
     </header>
   );

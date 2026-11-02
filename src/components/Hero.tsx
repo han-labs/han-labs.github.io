@@ -95,8 +95,9 @@ export function Hero() {
 
           <div className="grid gap-2.5 sm:grid-cols-2">
             {currentProfile.highlights.map((item) => (
-              <div key={item} className="border border-ink bg-paper px-3 py-1.5 text-center text-[10px] font-semibold text-ink">
-                {item}
+              <div key={item.title} className="border border-ink bg-paper px-3 py-2.5 text-center text-ink">
+                <p className="text-[11px] font-semibold">{item.title}</p>
+                <p className="mt-1 text-[10px] font-normal leading-relaxed text-ink/65">{item.detail}</p>
               </div>
             ))}
           </div>

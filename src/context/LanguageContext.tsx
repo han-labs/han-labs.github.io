@@ -14,7 +14,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Navigation Links
   'nav.about': { en: 'About', vi: 'Giới thiệu' },
   'nav.skills': { en: 'Skills', vi: 'Kỹ năng' },
-  'nav.projects': { en: 'Projects', vi: 'Dự án' },
+  'nav.projects': { en: 'Projects & Research', vi: 'Dự án & Nghiên cứu' },
   'nav.achievements': { en: 'Timeline', vi: 'Dòng thời gian' },
   'nav.beyond': { en: 'Beyond', vi: 'Bên lề' },
   'nav.certificates': { en: 'Achievements', vi: 'Thành tựu' },
@@ -41,11 +41,11 @@ const translations: Record<string, Record<Language, string>> = {
   'contribute.eyebrow': { en: 'Contribute', vi: 'Đóng góp' },
   'contribute.title': { en: 'What I can bring to a team.', vi: 'Những gì tôi có thể đóng góp cho đội ngũ.' },
 
-  'projects.eyebrow': { en: 'Projects', vi: 'Dự án' },
-  'projects.title': { en: 'Featured projects.', vi: 'Các dự án tiêu biểu.' },
+  'projects.eyebrow': { en: 'Projects & Research', vi: 'Dự án & Nghiên cứu' },
+  'projects.title': { en: 'Selected projects & research.', vi: 'Dự án & công trình nghiên cứu.' },
 
   'timeline.eyebrow': { en: 'Timeline', vi: 'Dòng thời gian' },
-  'timeline.title': { en: 'Milestones through the years.', vi: 'Những cột mốc qua từng năm.' },
+  'timeline.title': { en: 'Key milestones.', vi: 'Những cột mốc chính.' },
 
   'beyond.eyebrow': { en: 'Beyond the Code', vi: 'Bên ngoài code' },
   'beyond.title': { en: 'Stories from the journey', vi: 'Những câu chuyện trong hành trình' },
@@ -55,7 +55,7 @@ const translations: Record<string, Record<Language, string>> = {
   'certificates.kind.award': { en: 'Award', vi: 'Giải thưởng' },
   'certificates.kind.scholarship': { en: 'Scholarship', vi: 'Học bổng' },
   'certificates.kind.certificate': { en: 'Certificate', vi: 'Chứng nhận' },
-  'certificates.hint': { en: 'Drag to explore · Auto-scrolling pauses while you interact', vi: 'Kéo để xem · Tự động dừng khi bạn tương tác' },
+  'certificates.hint': { en: 'Drag to explore', vi: 'Kéo để xem thêm' },
   'certificates.view': { en: 'View', vi: 'Xem' },
 
   // Contact Section

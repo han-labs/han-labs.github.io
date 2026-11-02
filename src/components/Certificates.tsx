@@ -1,7 +1,8 @@
-import { FocusEvent, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Certificate, certificates } from '../data/certificates';
 import { SectionHeader } from './SectionHeader';
 import { useLanguage } from '../context/LanguageContext';
+import { HorizontalRail } from './HorizontalRail';
 
 const KIND_STYLES: Record<Certificate['kind'], string> = {
   award: 'bg-pink-pop',
@@ -12,30 +13,6 @@ const KIND_STYLES: Record<Certificate['kind'], string> = {
 export function Certificates() {
   const { lang, t } = useLanguage();
   const [activeCertificate, setActiveCertificate] = useState<Certificate | null>(null);
-  const [autoScrollPaused, setAutoScrollPaused] = useState(false);
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!carousel || reducedMotion || autoScrollPaused || activeCertificate) return;
-
-    const intervalId = window.setInterval(() => {
-      const firstCard = carousel.querySelector<HTMLElement>('[data-certificate-card]');
-      if (!firstCard) return;
-
-      const gap = Number.parseFloat(window.getComputedStyle(carousel).columnGap) || 16;
-      const step = firstCard.offsetWidth + gap;
-      const nearEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - step * 0.6;
-
-      carousel.scrollTo({
-        left: nearEnd ? 0 : carousel.scrollLeft + step,
-        behavior: 'smooth',
-      });
-    }, 3600);
-
-    return () => window.clearInterval(intervalId);
-  }, [activeCertificate, autoScrollPaused]);
 
   useEffect(() => {
     if (!activeCertificate) return;
@@ -60,27 +37,10 @@ export function Certificates() {
 
   const activeCopy = activeCertificate ? getLocalizedCopy(activeCertificate) : null;
 
-  const handleCarouselBlur = (event: FocusEvent<HTMLDivElement>) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) setAutoScrollPaused(false);
-  };
-
   return (
     <section id="certificates" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader eyebrow={t('certificates.eyebrow')} title={t('certificates.title')} />
-      <p className="mt-2 font-mono text-[10px] text-ink/55">{t('certificates.hint')}</p>
-
-      <div
-        ref={carouselRef}
-        className="scrollbar-thin mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4"
-        onMouseEnter={() => setAutoScrollPaused(true)}
-        onMouseLeave={() => setAutoScrollPaused(false)}
-        onPointerDown={() => setAutoScrollPaused(true)}
-        onPointerUp={() => setAutoScrollPaused(false)}
-        onPointerCancel={() => setAutoScrollPaused(false)}
-        onFocusCapture={() => setAutoScrollPaused(true)}
-        onBlurCapture={handleCarouselBlur}
-        aria-label={t('certificates.title')}
-      >
+      <HorizontalRail label={t('certificates.title')}>
         {certificates.map((certificate) => {
           const localized = getLocalizedCopy(certificate);
 
@@ -119,7 +79,7 @@ export function Certificates() {
             </button>
           );
         })}
-      </div>
+      </HorizontalRail>
 
       {activeCertificate && activeCopy ? (
         <div

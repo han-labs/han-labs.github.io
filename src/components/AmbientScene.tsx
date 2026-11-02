@@ -53,6 +53,13 @@ export function AmbientScene() {
           />
         ))}
       </div>
+      <div className="daytime-birds">
+        {[0, 1, 2].map((bird) => (
+          <span key={bird} className="daytime-bird" style={{ top: `${12 + bird * 6}%`, animationDelay: `${bird * -9}s`, animationDuration: `${34 + bird * 7}s` }}>
+            <i /><i />
+          </span>
+        ))}
+      </div>
       <div className="celestial-orbit">
         <div className="celestial-sun" />
         <div className="celestial-moon" />

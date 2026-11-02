@@ -12,11 +12,6 @@ export function About() {
       />
       <div className="brutal-card p-4 text-sm font-normal leading-7 text-ink/90 md:p-5 md:text-[15px]">
         <p>{profile[lang].about}</p>
-        <div className="mt-4 border-t border-ink/15 pt-4 text-xs leading-relaxed text-ink/70 md:text-sm">
-          {lang === 'en'
-            ? 'Education: HCM-UTE · Faculty of Advanced Education · Information Technology · Sep 2023–2027 (expected). “Very Good Student” for three consecutive academic years; all courses passed on the first attempt.'
-            : 'Học vấn: HCM-UTE · Faculty of Advanced Education (FAE) · Công nghệ Thông tin · 09/2023–2027 (dự kiến). Đạt danh hiệu “Sinh viên Giỏi” trong ba năm học liên tiếp; hoàn thành 100% học phần ngay lần đầu.'}
-        </div>
       </div>
       <div className="brutal-card mt-4 bg-paper p-4 md:p-5">
         <div className="flex flex-wrap items-baseline justify-between gap-2">

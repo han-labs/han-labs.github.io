@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Project, projects } from '../data/projects';
 import { SectionHeader } from './SectionHeader';
 import { useLanguage } from '../context/LanguageContext';
+import { HorizontalRail } from './HorizontalRail';
 
 const projectHash = (project: Project) => `#project-${project.slug}`;
 
@@ -58,7 +59,7 @@ export function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
       <SectionHeader eyebrow={t('projects.eyebrow')} title={t('projects.title')} />
 
-      <div className="mx-auto mt-5 grid max-w-5xl gap-5 md:grid-cols-2">
+      <HorizontalRail label={t('projects.title')}>
         {projects.map((project) => {
           const currentData = project[lang];
 
@@ -75,20 +76,21 @@ export function Projects() {
                   openProject(project);
                 }
               }}
-              className="brutal-card group flex h-full cursor-pointer flex-col overflow-hidden bg-paper transition-transform duration-200 hover:-translate-y-1 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-blue-pop md:h-[560px] lg:h-[550px]"
+              className="brutal-card group flex w-[min(82vw,330px)] shrink-0 cursor-pointer flex-col overflow-hidden bg-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-pop"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-ink bg-cream">
                 {project.image ? (
                   <img
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.025]"
+                    className={`h-full w-full ${project.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
                     src={project.image}
+                    loading="lazy"
                     alt={`${project.name} project preview`}
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,var(--color-cream),var(--color-yellow-pop))] p-6 text-center">
                     <div>
                       <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55">
-                        {t('project.gallery')}
+                        {currentData.status}
                       </span>
                       <div className="mt-2 text-2xl font-semibold text-ink">{project.name}</div>
                     </div>
@@ -96,10 +98,10 @@ export function Projects() {
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col p-4 md:p-5">
+              <div className="flex flex-1 flex-col p-3.5">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-lg font-semibold text-ink md:text-xl">{project.name}</h3>
+                    <h3 className="text-base font-semibold text-ink">{project.name}</h3>
                     {project.period ? (
                       <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-ink/55">{project.period}</p>
                     ) : null}
@@ -109,18 +111,18 @@ export function Projects() {
                   </span>
                 </div>
 
-                <p className="mt-3 line-clamp-2 text-sm font-normal leading-relaxed text-ink/80">{currentData.summary}</p>
+                <p className="mt-3 line-clamp-3 text-xs font-normal leading-relaxed text-ink/80">{currentData.summary}</p>
                 <p className="mt-2 line-clamp-2 text-xs font-medium text-ink/65">{currentData.role}</p>
 
                 <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tech.slice(0, 6).map((tech) => (
+                  {project.tech.slice(0, 4).map((tech) => (
                     <span key={tech} className="border border-ink/25 bg-yellow-pop px-2 py-1 text-[9px] font-medium text-ink">
                       {tech}
                     </span>
                   ))}
-                  {project.tech.length > 6 ? (
+                  {project.tech.length > 4 ? (
                     <span className="border border-ink/25 bg-cream px-2 py-1 text-[9px] font-medium text-ink/65">
-                      +{project.tech.length - 6}
+                      +{project.tech.length - 4}
                     </span>
                   ) : null}
                 </div>
@@ -165,7 +167,7 @@ export function Projects() {
             </article>
           );
         })}
-      </div>
+      </HorizontalRail>
 
       {activeProject && activeCopy ? (
         <div
@@ -193,7 +195,7 @@ export function Projects() {
                 <img
                   src={activeProject.image}
                   alt={`${activeProject.name} project preview`}
-                  className="h-full w-full object-cover"
+                  className={`h-full w-full ${activeProject.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
                 />
               ) : (
                 <div className="flex h-full items-center justify-center bg-[linear-gradient(135deg,var(--color-cream),var(--color-yellow-pop))] p-8">
@@ -267,6 +269,19 @@ export function Projects() {
                   <p className="mt-2 text-sm leading-7 text-ink/85">{activeCopy.contribution}</p>
                 </section>
               </div>
+
+              {activeCopy.overview && (
+                <section className="mt-6 border-t border-ink/15 pt-5">
+                  <h4 className="text-sm font-semibold text-ink">{lang === 'en' ? 'Overview' : 'Tổng quan'}</h4>
+                  <p className="mt-2 text-sm leading-7 text-ink/85">{activeCopy.overview}</p>
+                </section>
+              )}
+              {activeCopy.findings && (
+                <section className="mt-5">
+                  <h4 className="text-sm font-semibold text-ink">{lang === 'en' ? 'Results & scope' : 'Kết quả & phạm vi'}</h4>
+                  <p className="mt-2 text-sm leading-7 text-ink/85">{activeCopy.findings}</p>
+                </section>
+              )}
 
               <section className="mt-7 border-t border-ink/15 pt-5">
                 <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/55">

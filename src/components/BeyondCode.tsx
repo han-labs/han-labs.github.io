@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { beyondCodeItems, LocalizedJourneyArticle } from '../data/beyondCode';
 import { SectionHeader } from './SectionHeader';
 import { useLanguage } from '../context/LanguageContext';
@@ -7,14 +7,19 @@ export function BeyondCode() {
   const { lang, t } = useLanguage();
   const [activeArticle, setActiveArticle] = useState<LocalizedJourneyArticle | null>(null);
 
-  // Disable scroll when modal is open
-  if (typeof window !== 'undefined') {
-    if (activeArticle) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }
+  useEffect(() => {
+    if (!activeArticle) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setActiveArticle(null);
+    };
+    window.addEventListener('keydown', onEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onEscape);
+    };
+  }, [activeArticle]);
 
   return (
     <section id="beyond" className="mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
@@ -22,14 +27,13 @@ export function BeyondCode() {
         eyebrow={t('beyond.eyebrow')}
         title={t('beyond.title')}
       />
-      <div className="mt-5 grid gap-5 md:grid-cols-2">
+      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {beyondCodeItems.map((item) => {
           const currentArticle = item[lang];
           return (
             <article
               key={currentArticle.title}
-              onClick={() => setActiveArticle(currentArticle)}
-              className="brutal-card-sm flex cursor-pointer flex-col justify-between bg-paper p-4 transition-transform duration-200 hover:-translate-y-1 md:p-5"
+              className="brutal-card-sm flex min-w-0 flex-col justify-between bg-paper p-3.5"
             >
               <div>
                 <div className="flex justify-between items-center mb-3">
@@ -38,10 +42,10 @@ export function BeyondCode() {
                   </span>
                   <span className="text-[10px] font-bold text-ink/70">{currentArticle.readTime}</span>
                 </div>
-                <h3 className="text-base font-semibold text-ink hover:underline md:text-lg">
-                  {currentArticle.title}
+                <h3 className="text-sm font-semibold leading-snug text-ink">
+                  <button type="button" onClick={() => setActiveArticle(currentArticle)} className="cursor-pointer text-left hover:underline">{currentArticle.title}</button>
                 </h3>
-                <p className="mt-2.5 text-xs font-normal leading-relaxed text-ink/75">
+                <p className="mt-2 line-clamp-3 text-xs font-normal leading-relaxed text-ink/75">
                   {currentArticle.excerpt}
                 </p>
               </div>
@@ -64,6 +68,9 @@ export function BeyondCode() {
         <div
           className="article-backdrop fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={() => setActiveArticle(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeArticle.title}
         >
           <div
             className="border-4 border-ink bg-paper max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 relative shadow-[6px_6px_0_var(--color-line)]"

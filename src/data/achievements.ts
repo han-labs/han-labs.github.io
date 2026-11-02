@@ -4,8 +4,8 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'Information Technology at HCM-UTE',
-          description: 'Started my undergraduate journey.',
+          title: 'HCM-UTE · Information Technology',
+          description: 'Began undergraduate studies.',
         },
         vi: {
           title: 'Công nghệ Thông tin tại HCM-UTE',
@@ -19,22 +19,22 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'UGO & Nguyen Truong To Scholarships',
-          description: 'Recognized for academic merit and determination in 2023–2024.',
+          title: 'UGO & Nguyen Truong To',
+          description: 'Scholarships for merit and determination, 2023–2024.',
         },
         vi: {
           title: 'Học bổng UGO & Nguyễn Trường Tộ',
-          description: 'Ghi nhận thành tích và nghị lực học tập năm học 2023–2024.',
+          description: 'Học bổng thành tích và nghị lực, 2023–2024.',
         },
       },
       {
         en: {
-          title: 'Started Undergraduate Research',
-          description: 'Explored retinal vessel segmentation through a university project.',
+          title: 'First research project',
+          description: 'Retinal vessel segmentation.',
         },
         vi: {
           title: 'Bắt đầu nghiên cứu khoa học',
-          description: 'Nghiên cứu phân đoạn mạch máu võng mạc trong một đề tài cấp trường.',
+          description: 'Phân đoạn mạch máu võng mạc.',
         },
       },
     ],
@@ -44,22 +44,22 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'Research & Eureka',
-          description: 'Rated “Very Good” at HCM-UTE and reached the Eureka semifinal.',
+          title: 'Research & Euréka',
+          description: '“Very Good” at HCM-UTE · Euréka semifinalist.',
         },
         vi: {
           title: 'Nghiên cứu & Eureka',
-          description: 'Đạt loại “Rất tốt” tại HCM-UTE và vào bán kết Eureka.',
+          description: '“Rất tốt” tại HCM-UTE · Bán kết Euréka.',
         },
       },
       {
         en: {
-          title: 'Digiworld Full Scholarship',
-          description: 'Received a full Backend Engineering scholarship.',
+          title: 'Digiworld scholarship',
+          description: 'Full scholarship for Backend Engineering.',
         },
         vi: {
           title: 'Học bổng toàn phần Digiworld',
-          description: 'Nhận học bổng toàn phần chương trình Backend Engineering.',
+          description: 'Toàn phần chương trình Backend Engineering.',
         },
       },
     ],
@@ -69,31 +69,31 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'STEM Mentor',
-          description: 'Guided students in the Empowering STEM Dreams project.',
+          title: 'STEM mentor',
+          description: 'Empowering STEM Dreams · Student mentoring.',
         },
         vi: {
           title: 'Cố vấn STEM',
-          description: 'Hướng dẫn học sinh trong dự án Empowering STEM Dreams.',
+          description: 'Hướng dẫn học sinh · Tự tin chọn STEM.',
         },
       },
       {
         en: {
           title: 'EmoViS · AMI 2026',
-          description: 'Co-authored an accepted paper; reached the Euréka 2026 semifinals.',
+          description: 'Paper accepted · Euréka semifinalist.',
         },
         vi: {
           title: 'EmoViS · AMI 2026',
-          description: 'Đồng tác giả bài báo được chấp nhận; vào bán kết Euréka 2026.',
+          description: 'Bài báo được chấp nhận · Bán kết Euréka.',
         },
       },
       {
-        en: { title: 'Software Engineer Intern · Eduz', description: 'Building RAG and LLM agents with reliability guardrails since August.' },
-        vi: { title: 'Software Engineer Intern · Eduz', description: 'Phát triển RAG và LLM agent với cơ chế kiểm soát độ tin cậy từ tháng 8.' },
+        en: { title: 'Eduz · Software Engineer Intern', description: 'Since August · RAG, agents & guardrails.' },
+        vi: { title: 'Eduz · Software Engineer Intern', description: 'Từ tháng 8 · RAG, agent & guardrails.' },
       },
       {
-        en: { title: '9th Chien Hsing Scholarship', description: 'Recognized for academic achievement and research contributions.' },
-        vi: { title: 'Học bổng Chấn hưng lần IX', description: 'Ghi nhận kết quả học tập và đóng góp nghiên cứu khoa học.' },
+        en: { title: '9th Chien Hsing scholarship', description: 'Academic achievement & research contributions.' },
+        vi: { title: 'Học bổng Chấn hưng lần IX', description: 'Thành tích học tập & đóng góp nghiên cứu.' },
       },
     ],
   },
@@ -102,12 +102,12 @@ export const achievements = [
     items: [
       {
         en: {
-          title: 'Expected Graduation',
-          description: 'Expected to graduate from HCM-UTE.',
+          title: 'Expected graduation',
+          description: 'Information Technology · HCM-UTE.',
         },
         vi: {
           title: 'Dự kiến tốt nghiệp',
-          description: 'Dự kiến hoàn thành chương trình tại HCM-UTE.',
+          description: 'Công nghệ Thông tin · HCM-UTE.',
         },
       },
     ],
