@@ -155,6 +155,19 @@ export function Certificates() {
                 </span>
                 <h3 className="text-lg font-semibold text-ink">{activeCopy.name}</h3>
                 <p className="mt-1 text-sm text-ink/65">{activeCopy.issuer}</p>
+                {activeCertificate.details && (
+                  <p className="mt-2 text-sm text-ink/80">{activeCertificate.details[lang]}</p>
+                )}
+                {activeCertificate.document && (
+                  <a
+                    href={activeCertificate.document}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="brutal-button mt-3 inline-flex bg-blue-pop px-3 py-2 text-xs font-semibold text-ink"
+                  >
+                    {lang === 'en' ? 'Open original PDF ↗' : 'Mở bản PDF gốc ↗'}
+                  </a>
+                )}
               </div>
               <span className="font-mono text-xs text-ink/55">{activeCertificate.date}</span>
             </div>

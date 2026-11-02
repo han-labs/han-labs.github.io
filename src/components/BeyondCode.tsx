@@ -22,7 +22,7 @@ export function BeyondCode() {
         eyebrow={t('beyond.eyebrow')}
         title={t('beyond.title')}
       />
-      <div className="mt-5 grid gap-5 md:grid-cols-3">
+      <div className="mt-5 grid gap-5 md:grid-cols-2">
         {beyondCodeItems.map((item) => {
           const currentArticle = item[lang];
           return (
@@ -139,7 +139,7 @@ export function BeyondCode() {
                       <img
                         src={section.image}
                         alt={section.imageAlt ?? ''}
-                        className="aspect-[16/10] w-full object-cover"
+                        className="max-h-[65vh] w-full object-contain"
                       />
                       {section.imageCaption && (
                         <figcaption className="border-t-2 border-ink px-3 py-2 text-[10px] font-medium leading-relaxed text-ink/70 md:text-xs">

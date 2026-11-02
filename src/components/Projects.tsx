@@ -138,7 +138,7 @@ export function Projects() {
                   >
                     {t('project.readcase')} →
                   </a>
-                  <a
+                  {project.github && <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
@@ -147,7 +147,7 @@ export function Projects() {
                     className="brutal-button bg-paper px-3 py-1.5 text-[10px] font-semibold text-ink"
                   >
                     GitHub
-                  </a>
+                  </a>}
                   {project.live ? (
                     <a
                       href={project.live}
@@ -197,7 +197,11 @@ export function Projects() {
                 />
               ) : (
                 <div className="flex h-full items-center justify-center bg-[linear-gradient(135deg,var(--color-cream),var(--color-yellow-pop))] p-8">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-ink/55">{t('project.gallery')}</span>
+                  <div className="text-center">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55">{activeCopy.status}</span>
+                    <div className="mt-2 text-2xl font-semibold text-ink md:text-3xl">{activeProject.name}</div>
+                    <p className="mt-3 text-xs text-ink/65">{activeProject.tech.slice(0, 5).join(' · ')}</p>
+                  </div>
                 </div>
               )}
             </div>
@@ -217,14 +221,14 @@ export function Projects() {
                 </h3>
                 <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink/75 md:text-base">{activeCopy.summary}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
-                  <a
+                  {activeProject.github && <a
                     href={activeProject.github}
                     target="_blank"
                     rel="noreferrer"
                     className="brutal-button bg-paper px-3 py-1.5 text-[11px] font-semibold text-ink"
                   >
                     GitHub ↗
-                  </a>
+                  </a>}
                   {activeProject.live ? (
                     <a
                       href={activeProject.live}

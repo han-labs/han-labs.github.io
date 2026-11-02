@@ -62,8 +62,8 @@ const translations: Record<string, Record<Language, string>> = {
   'contact.eyebrow': { en: 'Get in Touch', vi: 'Liên hệ' },
   'contact.title': { en: 'Let’s build something meaningful.', vi: 'Hãy cùng nhau xây dựng những giá trị ý nghĩa.' },
   'contact.desc': { 
-    en: 'I’m open to software development opportunities where I can contribute with care, learn from an experienced team, and grow through real product challenges.',
-    vi: 'Tôi sẵn sàng với các cơ hội phát triển phần mềm, nơi tôi có thể đóng góp bằng sự chỉn chu, học hỏi từ một đội ngũ giàu kinh nghiệm và trưởng thành qua những bài toán sản phẩm thực tế.'
+    en: 'I’m open to AI software engineering opportunities, academic exchange, and research collaboration in NLP, Generative Information Retrieval, and Trustable AI.',
+    vi: 'Tôi sẵn sàng với các cơ hội phát triển phần mềm AI, trao đổi học thuật và hợp tác nghiên cứu về NLP, truy hồi thông tin tạo sinh và AI đáng tin cậy.'
   },
   'contact.location': { en: 'Location', vi: 'Địa điểm' },
   'contact.email': { en: 'Email', vi: 'Email' },

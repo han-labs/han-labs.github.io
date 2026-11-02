@@ -5,27 +5,34 @@ export type Certificate = {
   kind: 'award' | 'scholarship' | 'certificate';
   proof: string;
   image: string;
+  document?: string;
+  details?: { en: string; vi: string };
   en?: { name: string; issuer: string };
   vi?: { name: string; issuer: string };
 };
 
 export const certificates: Certificate[] = [
   {
-    name: 'EF SET English Certificate · C1 Advanced',
-    issuer: 'EF SET',
-    date: '22 Jul 2026',
+    name: 'TOEIC Listening & Reading · 785/990',
+    issuer: 'ETS · IIG Vietnam',
+    date: '07 Oct 2026',
     kind: 'certificate',
-    proof: 'https://cert.efset.org/S3iy7S',
-    image: '/certificates/EFSET-english-cert.jpg',
+    proof: '/certificates/toeic-785.pdf',
+    document: '/certificates/toeic-785.pdf',
+    image: '/certificates/toeic-785.png',
+    details: {
+      en: 'Listening: 405/495 · Reading: 380/495 · Valid until 07 Oct 2028.',
+      vi: 'Nghe: 405/495 · Đọc: 380/495 · Có giá trị đến 07/10/2028.',
+    },
     vi: {
-      name: 'Chứng chỉ tiếng Anh EF SET · C1 Advanced',
-      issuer: 'EF SET',
+      name: 'TOEIC Nghe & Đọc · 785/990',
+      issuer: 'ETS · IIG Việt Nam',
     },
   },
   {
     name: 'Software Development With Scrum · Certificate',
     issuer: 'Axon Active Vietnam',
-    date: 'May 2026',
+    date: 'Jul 2026',
     kind: 'certificate',
     proof: '#todo-scrum',
     image: '/certificates/scrum_cert.png',
@@ -37,13 +44,25 @@ export const certificates: Certificate[] = [
   {
     name: 'Development and Operations System · Certificate',
     issuer: 'VTI Academy',
-    date: 'Dec 2025',
+    date: 'May 2026',
     kind: 'certificate',
     proof: '#todo-vti-devops',
     image: '/certificates/development-and-operations-cert.jpg',
     vi: {
       name: 'Chứng chỉ Development and Operations System',
       issuer: 'VTI Academy',
+    },
+  },
+  {
+    name: 'The 9th Chien Hsing Industrial Technology Scholarship',
+    issuer: 'Vietnam Taiwanese Entrepreneurs Scholarship Foundation · TECO in HCMC',
+    date: '23 Oct 2026',
+    kind: 'scholarship',
+    proof: '/awards/chien-hsing-scholarship-2026.jpg',
+    image: '/awards/chien-hsing-scholarship-2026.jpg',
+    vi: {
+      name: 'Học bổng Kỹ thuật Công nghiệp Chấn hưng Việt Nam lần thứ IX',
+      issuer: 'Hội Khuyến học Thương gia Đài Loan tại Việt Nam · Phòng Giáo dục, TECO tại TP.HCM',
     },
   },
   {

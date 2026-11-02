@@ -1,6 +1,6 @@
 # Huynh Gia Han Portfolio
 
-Personal portfolio for Backend Engineer opportunities.
+Personal portfolio covering NLP research and AI software development.
 
 ## Run locally
 
@@ -28,5 +28,5 @@ In GitHub:
 
 - Replace `public/assets/avatar-placeholder.svg` with your real avatar.
 - Replace project thumbnails.
-- Keep the current resume at `public/HuynhGiaHan_Resume.pdf`.
+- Keep the current resume at `public/HuynhGiaHan_CV_2026.pdf`.
 - Update GitHub/LinkedIn/proof links in `src/data`.

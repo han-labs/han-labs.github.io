@@ -1,26 +1,26 @@
 export const skills = [
   {
     group: 'Languages',
-    items: ['Java', 'JavaScript', 'SQL'],
+    items: ['Python', 'Java'],
   },
   {
-    group: 'Backend',
-    items: ['Spring Boot', 'Spring Security', 'Spring Data JPA', 'Hibernate', 'RESTful APIs', 'JWT', 'Maven'],
+    group: 'ML/DL & NLP',
+    items: ['PyTorch', 'Hugging Face Transformers', 'NLP', 'Multi-label classification', 'Model evaluation'],
   },
   {
-    group: 'Databases',
-    items: ['MySQL', 'PostgreSQL'],
+    group: 'LLM & Information Retrieval',
+    items: ['RAG', 'Embeddings', 'Vector retrieval', 'LLM Agents', 'Guardrails'],
   },
   {
     group: 'Tools & Practices',
-    items: ['Git', 'GitHub', 'Docker', 'Postman', 'Flyway', 'OpenAPI', 'Agile', 'Scrum'],
+    items: ['Git', 'GitHub', 'Docker Compose', 'Google Colab'],
   },
   {
-    group: 'Additional',
-    items: ['React', 'HTML', 'CSS', 'Android SDK', 'Firebase'],
+    group: 'Software Development',
+    items: ['Spring Boot', 'RESTful APIs', 'React', 'PostgreSQL', 'pgvector'],
   },
   {
     group: 'Spoken Languages',
-    items: ['Vietnamese · Native', 'English · C1 (EF SET)', 'Japanese · Basic'],
+    items: ['Vietnamese · Native', 'English · TOEIC 785/990', 'Japanese · Basic'],
   },
 ];

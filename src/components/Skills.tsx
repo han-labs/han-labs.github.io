@@ -8,12 +8,15 @@ const GROUP_TRANSLATIONS: Record<string, Record<string, string>> = {
   'Databases': { en: 'Databases', vi: 'Cơ sở dữ liệu' },
   'Tools & Practices': { en: 'Tools & Practices', vi: 'Công cụ & Quy trình' },
   'Additional': { en: 'Additional', vi: 'Bổ sung' },
+  'ML/DL & NLP': { en: 'ML/DL & NLP', vi: 'ML/DL & NLP' },
+  'LLM & Information Retrieval': { en: 'LLM & Retrieval', vi: 'LLM & Truy hồi' },
+  'Software Development': { en: 'Development', vi: 'Phát triển phần mềm' },
   'Spoken Languages': { en: 'Languages', vi: 'Ngoại ngữ' },
 };
 
 const ITEM_TRANSLATIONS: Record<string, Record<string, string>> = {
   'Vietnamese · Native': { en: 'Vietnamese · Native', vi: 'Tiếng Việt · Bản ngữ' },
-  'English · C1 (EF SET)': { en: 'English · C1 (EF SET)', vi: 'Tiếng Anh · C1 (EF SET)' },
+  'English · TOEIC 785/990': { en: 'English · TOEIC 785/990', vi: 'Tiếng Anh · TOEIC 785/990' },
   'Japanese · Basic': { en: 'Japanese · Basic', vi: 'Tiếng Nhật · Cơ bản' },
 };
 

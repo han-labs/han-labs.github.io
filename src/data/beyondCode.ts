@@ -210,14 +210,12 @@ export const beyondCodeItems: JourneyArticle[] = [
             'In 2024, that curiosity led me to join an AI-focused undergraduate research group. I worked alongside peers with deep expertise, learning openly rather than pretending to be an AI specialist and contributing wherever my skills were useful.',
             'Our first project, “Advanced Retinal Vessel Analysis Using Deep Learning for High-Resolution Image Segmentation,” involved evaluating models, studying related literature, and co-authoring the research report. The project received a “Very Good” rating at HCM-UTE and advanced to the semifinals of the 2025 Eureka Student Research Award.',
           ],
-          image: '/assets/nckh-team.png',
-          imageAlt: 'Gia Han and her research team standing beside their project posters at HCM-UTE',
-          imageCaption: 'With my research team after presenting our retinal vessel analysis project at HCM-UTE.',
         },
         {
           heading: 'Continuing With Vietnamese NLP',
           paragraphs: [
-            'I am continuing this journey through an NLP project on emoji-aware representation learning for fine-grained emotion recognition in Vietnamese social media text. Our team is currently preparing a paper for the FAIR conference, giving me another opportunity to learn how research questions become evidence, experiments, and clear technical writing.',
+            'From May to September 2026, I worked on “EmoViS: Emoji-Augmented ViSoBERT for Fine-Grained Multi-Label Emotion Recognition in Vietnamese Social Media Text.” I reviewed related work, reproduced and evaluated the ViSoBERT baseline using PyTorch and Hugging Face Transformers on Google Colab, and supported data preparation and annotation.',
+            'I co-authored the paper and served as a co-presenter. The paper was accepted at the International Conference on Autonomous Machine Intelligence (AMI 2026), and the project reached the semifinals of the 28th Euréka Student Research Award. This experience strengthened my ability to connect research questions with experiments, evidence, and clear technical writing.',
           ],
         },
         {
@@ -256,14 +254,12 @@ export const beyondCodeItems: JourneyArticle[] = [
             'Năm 2024, sự tò mò đưa tôi đến với một nhóm nghiên cứu khoa học tập trung vào AI. Tôi được làm việc cùng những người bạn có chuyên môn sâu, thẳng thắn học hỏi thay vì cố tỏ ra mình là chuyên gia và đóng góp bằng những kỹ năng phù hợp nhất.',
             'Đề tài đầu tiên, “Phân tích mạch máu võng mạc nâng cao sử dụng Deep Learning để phân đoạn ảnh có độ phân giải cao”, yêu cầu nhóm đánh giá mô hình, đọc các công trình liên quan và cùng viết báo cáo. Đề tài đạt loại “Rất tốt” tại HCM-UTE và vào bán kết Giải thưởng Sinh viên Nghiên cứu Khoa học Eureka 2025.',
           ],
-          image: '/assets/nckh-team.png',
-          imageAlt: 'Gia Hân và nhóm nghiên cứu bên cạnh các poster đề tài tại HCM-UTE',
-          imageCaption: 'Cùng nhóm nghiên cứu sau buổi trình bày đề tài phân tích mạch máu võng mạc tại HCM-UTE.',
         },
         {
           heading: 'Tiếp tục với NLP tiếng Việt',
           paragraphs: [
-            'Tôi đang tiếp tục hành trình này qua một đề tài NLP về biểu diễn có nhận biết emoji cho bài toán nhận diện cảm xúc chi tiết trên văn bản mạng xã hội tiếng Việt. Nhóm hiện chuẩn bị bài báo cho hội nghị FAIR, cho tôi thêm cơ hội quan sát cách một câu hỏi nghiên cứu được chuyển thành minh chứng, thử nghiệm và nội dung kỹ thuật rõ ràng.',
+            'Từ tháng 5 đến tháng 9/2026, tôi tham gia đề tài “EmoViS: Emoji-Augmented ViSoBERT for Fine-Grained Multi-Label Emotion Recognition in Vietnamese Social Media Text”. Tôi tổng quan các công trình liên quan, tái lập và đánh giá baseline ViSoBERT bằng PyTorch và Hugging Face Transformers trên Google Colab, đồng thời hỗ trợ chuẩn bị và gán nhãn dữ liệu.',
+            'Tôi đồng tác giả bài báo và cùng trình bày kết quả. Bài báo được chấp nhận tại International Conference on Autonomous Machine Intelligence (AMI 2026), đồng thời đề tài vào bán kết Giải thưởng Sinh viên Nghiên cứu Khoa học Euréka lần thứ 28. Trải nghiệm này giúp tôi kết nối câu hỏi nghiên cứu với thử nghiệm, minh chứng và cách diễn đạt kỹ thuật rõ ràng.',
           ],
         },
         {
@@ -273,6 +269,84 @@ export const beyondCodeItems: JourneyArticle[] = [
             'Tôi không còn chỉ nhìn AI như một mối đe dọa. Đây là một công cụ mạnh mẽ nhưng vẫn cần khả năng phán đoán, bối cảnh và tư duy kỹ thuật có trách nhiệm. Nghiên cứu dạy tôi đọc tài liệu phức tạp, tiếp cận điều chưa chắc chắn có phương pháp và đặt câu hỏi tốt hơn.',
             'Tôi biết ơn những người bạn và người hướng dẫn đã cho tôi cơ hội học cùng họ. Tôi hiểu rằng để đóng góp, không nhất thiết phải là người giỏi nhất trong phòng; điều quan trọng là sẵn sàng đối diện với điều chưa biết, đặt câu hỏi và tiếp tục tiến về phía trước.',
           ],
+        },
+      ],
+    },
+  },
+  {
+    en: {
+      title: 'A New Milestone: The 9th Chien Hsing Scholarship',
+      excerpt: 'Recognition for learning, perseverance, and research—and encouragement to continue growing through academic exchange and community contribution.',
+      intro: 'Receiving the 9th Chien Hsing Industrial Technology Scholarship on 23 October 2026 marked a meaningful milestone in my university journey. I see it as both recognition of the work so far and encouragement to keep learning, contributing, and exploring new academic connections.',
+      readTime: '3 min read',
+      sections: [
+        {
+          heading: 'Recognition Beyond the Classroom',
+          paragraphs: [
+            'The scholarship is organized by the Vietnam Taiwanese Entrepreneurs Scholarship Foundation in coordination with the Education Division of the Taipei Economic and Cultural Office (TECO) in Ho Chi Minh City. I received it for academic achievement and contributions to scientific research.',
+            'The program supports students who persevere through challenges, show academic ability, and contribute to university life. Its priority criteria include financial hardship and determination, good academic results, research or academic projects, technical competitions, volunteering and student activities, and a proactive approach to personal growth.',
+          ],
+          image: '/assets/chien-hsing-1.jpg',
+          imageAlt: 'Gia Han holding the Chien Hsing scholarship certificate outside TECO in Ho Chi Minh City',
+          imageCaption: 'With the scholarship certificate at the Taipei Economic and Cultural Office in Ho Chi Minh City.',
+        },
+        {
+          heading: 'A Shared Milestone',
+          paragraphs: [
+            'The ceremony was also an opportunity to share this moment with fellow HCM-UTE recipients and the representatives supporting the program. The photographs remind me that an individual milestone is connected to the teachers, peers, family, and organizations who make continued learning possible.',
+            'I am grateful to the Foundation, the Education Division of TECO in HCMC, and my university for their support and trust.',
+          ],
+          image: '/assets/chien-hsing-2.jpg',
+          imageAlt: 'HCM-UTE scholarship recipients and representatives at the ninth Chien Hsing scholarship ceremony',
+          imageCaption: 'Moments from the scholarship ceremony with fellow HCM-UTE recipients and representatives.',
+        },
+        {
+          heading: 'Encouragement for the Next Chapter',
+          paragraphs: [
+            'This scholarship encourages me to continue developing at the intersection of software engineering and AI, and to explore academic exchange and research collaboration in Taiwan. My next steps remain practical: deepen my technical foundations, learn from experienced teams, and contribute thoughtfully to the work I take on.',
+            'For me, the certificate is a reminder to stay curious and persistent—and to make good use of the opportunities that others have helped open.',
+          ],
+          image: '/assets/chien-hsing-3.jpg',
+          imageAlt: 'The ninth Chien Hsing scholarship certificate and gifts from the ceremony',
+          imageCaption: 'The certificate dated 23 October 2026, alongside keepsakes from the ceremony.',
+        },
+      ],
+    },
+    vi: {
+      title: 'Một cột mốc mới: Học bổng Chấn hưng lần IX',
+      excerpt: 'Sự ghi nhận cho học tập, nghị lực và nghiên cứu—cùng động lực tiếp tục phát triển qua trao đổi học thuật và đóng góp cho cộng đồng.',
+      intro: 'Nhận Học bổng Kỹ thuật Công nghiệp Chấn hưng Việt Nam lần thứ IX ngày 23/10/2026 là một cột mốc ý nghĩa trong hành trình đại học của tôi. Tôi xem đây vừa là sự ghi nhận những nỗ lực đã qua, vừa là lời động viên để tiếp tục học hỏi, đóng góp và mở rộng kết nối học thuật.',
+      readTime: '3 phút đọc',
+      sections: [
+        {
+          heading: 'Sự ghi nhận vượt ra ngoài lớp học',
+          paragraphs: [
+            'Học bổng do Phòng Giáo dục thuộc Văn phòng Kinh tế và Văn hóa Đài Bắc tại TP.HCM phối hợp với Hội Khuyến học Thương gia Đài Loan tại Việt Nam tổ chức. Tôi được trao học bổng với sự ghi nhận về kết quả học tập và đóng góp nghiên cứu khoa học.',
+            'Chương trình hướng đến sinh viên có tinh thần vượt khó, năng lực học tập và tích cực đóng góp cho Nhà trường. Các tiêu chí ưu tiên bao gồm hoàn cảnh khó khăn và ý chí vươn lên, kết quả học tập từ khá, tham gia nghiên cứu hoặc dự án học thuật, các cuộc thi kỹ thuật, hoạt động sinh viên và tình nguyện, cùng tinh thần cầu tiến và chủ động phát triển bản thân.',
+          ],
+          image: '/assets/chien-hsing-1.jpg',
+          imageAlt: 'Gia Hân cầm chứng nhận học bổng Chấn hưng trước Văn phòng Kinh tế và Văn hóa Đài Bắc tại TP.HCM',
+          imageCaption: 'Cùng chứng nhận học bổng tại Văn phòng Kinh tế và Văn hóa Đài Bắc ở TP.HCM.',
+        },
+        {
+          heading: 'Một niềm vui được sẻ chia',
+          paragraphs: [
+            'Buổi lễ là dịp để tôi chia sẻ niềm vui cùng các bạn sinh viên HCM-UTE nhận học bổng và đại diện các đơn vị đồng hành. Những bức ảnh nhắc tôi rằng mỗi cột mốc cá nhân đều có sự góp sức của thầy cô, bạn bè, gia đình và những tổ chức đã giúp việc học được tiếp nối.',
+            'Tôi biết ơn Hội Khuyến học, Phòng Giáo dục thuộc TECO tại TP.HCM và Nhà trường vì sự hỗ trợ và tin tưởng này.',
+          ],
+          image: '/assets/chien-hsing-2.jpg',
+          imageAlt: 'Sinh viên HCM-UTE và đại diện các đơn vị tại lễ trao học bổng Chấn hưng lần IX',
+          imageCaption: 'Những khoảnh khắc tại lễ trao học bổng cùng các bạn sinh viên HCM-UTE và đại diện các đơn vị.',
+        },
+        {
+          heading: 'Động lực cho chặng đường tiếp theo',
+          paragraphs: [
+            'Học bổng tiếp thêm động lực để tôi phát triển ở giao điểm giữa kỹ thuật phần mềm và AI, đồng thời tìm hiểu cơ hội trao đổi học thuật và hợp tác nghiên cứu tại Đài Loan. Những bước tiếp theo vẫn rất cụ thể: đào sâu nền tảng kỹ thuật, học hỏi từ các đội ngũ có kinh nghiệm và đóng góp chỉn chu cho công việc mình đảm nhận.',
+            'Với tôi, chứng nhận này là lời nhắc tiếp tục tò mò, bền bỉ và trân trọng những cơ hội được mở ra nhờ sự đồng hành của mọi người.',
+          ],
+          image: '/assets/chien-hsing-3.jpg',
+          imageAlt: 'Chứng nhận học bổng Chấn hưng lần IX cùng các phần quà từ buổi lễ',
+          imageCaption: 'Chứng nhận ngày 23/10/2026 và những món quà lưu niệm từ buổi lễ.',
         },
       ],
     },

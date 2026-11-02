@@ -22,7 +22,7 @@ export type Project = {
   period?: string;
   tech: string[];
   image?: string;
-  github: string;
+  github?: string;
   live?: string;
   resources: ProjectResource[];
   gallery: ProjectMedia[];
@@ -31,6 +31,26 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: 'career-simulation',
+    name: 'AI-Integrated Career Simulation',
+    period: '08/2026 – Present',
+    tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'pgvector', 'Docker Compose', 'Gemini Embedding API', 'LLM API Integration'],
+    resources: [],
+    gallery: [],
+    en: {
+      status: 'Ongoing · Eduz',
+      summary: 'An AI-integrated career simulation platform with a RAG knowledge base and a tool-using LLM agent.',
+      role: 'Eduz Company Limited · Software Engineer Intern',
+      contribution: 'Led a team in system design; developed and tested an end-to-end RAG knowledge base and a tool-using LLM agent. Incorporated access control, prompt-injection checks, and output validation guardrails to support reliable AI behavior. The implementation combines a Java Spring Boot backend, React workflows, PostgreSQL with pgvector, Gemini embeddings, and LLM API integration.',
+    },
+    vi: {
+      status: 'Đang thực hiện · Eduz',
+      summary: 'Nền tảng mô phỏng nghề nghiệp tích hợp AI với knowledge base RAG và LLM agent sử dụng công cụ.',
+      role: 'Công ty TNHH Eduz · Software Engineer Intern',
+      contribution: 'Dẫn dắt nhóm trong thiết kế hệ thống; phát triển và kiểm thử knowledge base RAG và LLM agent sử dụng công cụ xuyên suốt. Tích hợp kiểm soát truy cập, kiểm tra prompt injection và xác thực đầu ra để hỗ trợ hành vi AI đáng tin cậy. Hệ thống kết hợp Backend Java Spring Boot, các luồng React, PostgreSQL với pgvector, Gemini embeddings và tích hợp LLM API.',
+    },
+  },
   {
     slug: 'peergradehub',
     name: 'PeerGradeHub',
@@ -52,27 +72,6 @@ export const projects: Project[] = [
       summary: 'Hệ thống quản lý đánh giá đồng cấp dành cho các học phần đại học.',
       role: 'Dự án nhóm · Lập trình viên Backend',
       contribution: 'Điều phối quá trình bàn giao của nhóm và triển khai hai use case hoàn chỉnh—Theo dõi tiến độ và Phân công đánh giá đồng cấp—từ UML, đặc tả đến phát triển full-stack, kiểm thử và triển khai công khai.',
-    },
-  },
-  {
-    slug: 'ownflow',
-    name: 'Ownflow',
-    period: '06/2026 – Present',
-    tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Spring Security', 'Spring Data JPA', 'Maven', 'Flyway', 'OpenAPI', 'React'],
-    github: 'https://github.com/han-labs/ownflow',
-    resources: [],
-    gallery: [],
-    en: {
-      status: 'In development',
-      summary: 'Evidence-aware learning platform designed to help software students understand and explain their Java Spring Boot projects through guided study and practice.',
-      role: 'Personal project · Full-stack Developer',
-      contribution: 'Designed, implemented, and tested the application end to end, from requirements and system architecture to backend APIs, database integration, frontend workflows, and deployment preparation.',
-    },
-    vi: {
-      status: 'Đang phát triển',
-      summary: 'Nền tảng học tập dựa trên minh chứng, giúp sinh viên phần mềm hiểu và trình bày dự án Java Spring Boot thông qua quá trình học và thực hành có hướng dẫn.',
-      role: 'Dự án cá nhân · Lập trình viên Full-stack',
-      contribution: 'Thiết kế, triển khai và kiểm thử ứng dụng xuyên suốt từ yêu cầu, kiến trúc hệ thống đến API Backend, tích hợp cơ sở dữ liệu, luồng Frontend và chuẩn bị triển khai.',
     },
   },
   {

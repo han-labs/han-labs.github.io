@@ -81,7 +81,7 @@ export function Hero() {
                       {copied ? t('hero.copied') : t('hero.copyemail')}
                     </button>
                     <a
-                      href={`mailto:${profile.email}?subject=Backend%20Engineer%20Opportunity`}
+                      href={`mailto:${profile.email}?subject=NLP%20%26%20AI%20Software%20Engineering%20Opportunity`}
                       onClick={() => setShowEmailPopover(false)}
                       className="brutal-button flex-grow bg-blue-pop px-2 py-0.5 text-center text-[9px] font-black text-ink"
                     >

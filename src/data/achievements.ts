@@ -12,21 +12,21 @@ export const achievements = [
           description: 'Bắt đầu hành trình đại học.',
         },
       },
-      {
-        en: {
-          title: 'UGO & Nguyen Truong To Scholarships',
-          description: 'Received scholarships for academic merit and determination.',
-        },
-        vi: {
-          title: 'Học bổng UGO & Nguyễn Trường Tộ',
-          description: 'Nhận học bổng ghi nhận thành tích và nghị lực học tập.',
-        },
-      },
     ],
   },
   {
     year: '2024',
     items: [
+      {
+        en: {
+          title: 'UGO & Nguyen Truong To Scholarships',
+          description: 'Recognized for academic merit and determination in 2023–2024.',
+        },
+        vi: {
+          title: 'Học bổng UGO & Nguyễn Trường Tộ',
+          description: 'Ghi nhận thành tích và nghị lực học tập năm học 2023–2024.',
+        },
+      },
       {
         en: {
           title: 'Started Undergraduate Research',
@@ -79,13 +79,21 @@ export const achievements = [
       },
       {
         en: {
-          title: 'NLP Research in Progress',
-          description: 'Studying fine-grained emotion recognition in Vietnamese social media text.',
+          title: 'EmoViS · AMI 2026',
+          description: 'Co-authored an accepted paper; reached the Euréka 2026 semifinals.',
         },
         vi: {
-          title: 'Nghiên cứu NLP đang thực hiện',
-          description: 'Nghiên cứu nhận diện cảm xúc trên văn bản mạng xã hội tiếng Việt.',
+          title: 'EmoViS · AMI 2026',
+          description: 'Đồng tác giả bài báo được chấp nhận; vào bán kết Euréka 2026.',
         },
+      },
+      {
+        en: { title: 'Software Engineer Intern · Eduz', description: 'Building RAG and LLM agents with reliability guardrails since August.' },
+        vi: { title: 'Software Engineer Intern · Eduz', description: 'Phát triển RAG và LLM agent với cơ chế kiểm soát độ tin cậy từ tháng 8.' },
+      },
+      {
+        en: { title: '9th Chien Hsing Scholarship', description: 'Recognized for academic achievement and research contributions.' },
+        vi: { title: 'Học bổng Chấn hưng lần IX', description: 'Ghi nhận kết quả học tập và đóng góp nghiên cứu khoa học.' },
       },
     ],
   },
