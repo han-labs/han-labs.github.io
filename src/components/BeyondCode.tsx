@@ -129,7 +129,7 @@ export function BeyondCode() {
                 <img
                   src={activeArticle.image}
                   alt={activeArticle.imageAlt ?? ''}
-                  className="aspect-[16/10] w-full object-cover"
+                  className={activeArticle.imageFit === 'contain' ? 'max-h-[65vh] w-full object-contain' : 'aspect-[16/10] w-full object-cover'}
                 />
                 {activeArticle.imageCaption && (
                   <figcaption className="border-t-2 border-ink px-3 py-2 text-[10px] font-medium leading-relaxed text-ink/70 md:text-xs">

@@ -9,6 +9,7 @@ export type LocalizedJourneyArticle = {
   featureUrl?: string;
   featureLabel?: string;
   image?: string;
+  imageFit?: 'contain' | 'cover';
   imageAlt?: string;
   imageCaption?: string;
   sections: Array<{
@@ -99,9 +100,13 @@ const journeyArticles: JourneyArticle[] = [
   {
     en: {
       title: 'My journey into true software engineering',
-      cover: '/assets/career-simulation-thumbnail.jpg',
-      coverPosition: 'center top',
-      excerpt: 'How requirements, system design, traceability, and team leadership changed the way I think about building software.',
+      cover: '/assets/digiworld-scholarship-warm.png',
+      coverFit: 'contain',
+      image: '/assets/digiworld-scholarship-warm.png',
+      imageAlt: 'Digiworld and VTI Academy full scholarship presentation for advanced Java Backend training',
+      imageCaption: 'The Digiworld “Uom Mam Xanh” scholarship at VTI Academy—encouragement to keep connecting software design, development, and operations.',
+      imageFit: 'contain',
+      excerpt: 'How design, teamwork, and learning about deployment and operations broadened my understanding of software engineering.',
       intro: 'I used to think software development was a race to the finish line: read the requirements, start coding, fix bugs, and deliver. If the application worked, I considered it a success. Looking back at my recent software engineering project, I realize how incomplete that perspective was. I walked in as a programmer, but I walked out with the mindset of an engineer.',
       readTime: '6 min read',
       sections: [
@@ -135,6 +140,13 @@ const journeyArticles: JourneyArticle[] = [
           ],
         },
         {
+          heading: 'Engineering continues after the code',
+          paragraphs: [
+            'The Digiworld “Uom Mam Xanh” full scholarship at VTI Academy encouraged me to keep building my software engineering foundation. Studying backend development alongside development and operations broadened my view of the lifecycle: thoughtful design and working code also need a consistent environment, repeatable deployment, and visibility into how the system runs.',
+            'For me, operations and DevOps are part of that same responsibility. Simple habits such as using Docker, documenting configuration, checking logs, and preparing clear run instructions help teammates run, maintain, and improve the software. They are another practical part of true software engineering.',
+          ],
+        },
+        {
           heading: 'Looking Forward',
           paragraphs: [
             'The application itself may eventually be replaced by something more advanced, and that is fine. The most durable deliverable was the engineering mindset I gained.',
@@ -145,9 +157,13 @@ const journeyArticles: JourneyArticle[] = [
     },
     vi: {
       title: 'Hành trình hiểu đúng về Software Engineering',
-      cover: '/assets/career-simulation-thumbnail.jpg',
-      coverPosition: 'center top',
-      excerpt: 'Cách yêu cầu, thiết kế hệ thống, khả năng truy vết và vai trò dẫn dắt nhóm thay đổi tư duy xây dựng phần mềm của tôi.',
+      cover: '/assets/digiworld-scholarship-warm.png',
+      coverFit: 'contain',
+      image: '/assets/digiworld-scholarship-warm.png',
+      imageAlt: 'Nhận học bổng toàn phần Java Backend nâng cao từ Digiworld và VTI Academy',
+      imageCaption: 'Học bổng Digiworld “Ươm Mầm Xanh” tại VTI Academy—động lực kết nối tư duy thiết kế, phát triển và vận hành phần mềm.',
+      imageFit: 'contain',
+      excerpt: 'Cách thiết kế, làm việc nhóm và kiến thức triển khai, vận hành giúp tôi hiểu đầy đủ hơn về kỹ thuật phần mềm.',
       intro: 'Tôi từng nghĩ phát triển phần mềm là một cuộc đua đến đích: đọc yêu cầu, bắt đầu viết code, sửa lỗi rồi bàn giao. Chỉ cần ứng dụng hoạt động, tôi đã xem đó là thành công. Khi nhìn lại đồ án Software Engineering gần đây, tôi nhận ra góc nhìn ấy chưa trọn vẹn. Tôi bước vào dự án với tư duy của một lập trình viên, nhưng rời khỏi nó với tư duy của một kỹ sư.',
       readTime: '6 phút đọc',
       sections: [
@@ -178,6 +194,13 @@ const journeyArticles: JourneyArticle[] = [
           paragraphs: [
             'Đảm nhận vai trò dẫn dắt nhóm giúp tôi nhìn thấy khía cạnh con người của Software Engineering. Xây dựng phần mềm cần giao tiếp, sắp xếp ưu tiên và duy trì một tầm nhìn kiến trúc chung, chứ không chỉ dựa vào khả năng viết code của từng cá nhân.',
             'Agile và Scrum giúp nhóm chia khối lượng công việc lớn thành những phần có thể quản lý. Chúng tôi liên tục kiểm tra giả định, hoàn thiện thiết kế và cải tiến triển khai thay vì cố xây mọi thứ hoàn hảo chỉ trong một lần.',
+          ],
+        },
+        {
+          heading: 'Kỹ thuật phần mềm tiếp nối sau những dòng code',
+          paragraphs: [
+            'Học bổng toàn phần Digiworld “Ươm Mầm Xanh” tại VTI Academy tiếp thêm động lực để tôi xây dựng nền tảng kỹ thuật phần mềm. Tìm hiểu Backend cùng kiến thức phát triển và vận hành giúp tôi nhìn rõ hơn vòng đời sản phẩm: thiết kế hợp lý và code chạy được còn cần môi trường nhất quán, cách triển khai có thể lặp lại và khả năng quan sát hệ thống khi hoạt động.',
+            'Với tôi, vận hành và DevOps cùng nằm trong trách nhiệm của người kỹ sư. Những thói quen đơn giản như dùng Docker, ghi rõ cấu hình, kiểm tra log và chuẩn bị hướng dẫn chạy ứng dụng giúp đồng đội dễ tiếp nhận, bảo trì và cải tiến phần mềm hơn. Đó cũng là một phần thực tế của “true software engineering”.',
           ],
         },
         {
