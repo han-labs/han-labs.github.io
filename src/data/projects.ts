@@ -63,12 +63,18 @@ export const projects: Project[] = [
   },
   {
     slug: 'career-simulation',
-    name: 'AI-Integrated Career Simulation',
+    name: 'HCM-UTE Career Simulation Platform',
     period: '08/2026 – Present',
     tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'pgvector', 'Docker Compose', 'Gemini Embedding API', 'LLM API Integration'],
     github: 'https://github.com/han-labs/career-simulation-platform',
+    image: '/assets/career-simulation-thumbnail.jpg',
+    imageFit: 'contain',
     resources: [],
-    gallery: [],
+    gallery: [{
+      src: '/assets/career-simulation-thumbnail.jpg',
+      alt: { en: 'HCM-UTE Career Simulation Platform homepage', vi: 'Trang chủ HCM-UTE Career Simulation Platform' },
+      caption: { en: 'Career exploration, simulations, assessments, and AI guidance in one platform.', vi: 'Khám phá nghề nghiệp, mô phỏng công việc, tự đánh giá và hỗ trợ AI trên cùng nền tảng.' },
+    }],
     en: {
       status: 'Ongoing · Eduz',
       summary: 'An AI-integrated career simulation platform with a RAG knowledge base and a tool-using LLM agent.',

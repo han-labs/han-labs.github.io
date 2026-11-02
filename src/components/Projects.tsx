@@ -304,7 +304,7 @@ export function Projects() {
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {activeProject.gallery.map((media) => (
                       <figure key={media.src} className="overflow-hidden border border-ink bg-cream">
-                        <img src={media.src} alt={media.alt[lang]} className="aspect-video w-full object-cover" />
+                        <img src={media.src} alt={media.alt[lang]} className="h-auto w-full object-contain" />
                         {media.caption ? (
                           <figcaption className="p-2 text-[10px] text-ink/65">{media.caption[lang]}</figcaption>
                         ) : null}

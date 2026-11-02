@@ -3,6 +3,9 @@ export type LocalizedJourneyArticle = {
   excerpt: string;
   intro: string;
   readTime: string;
+  cover?: string;
+  coverPosition?: string;
+  coverFit?: 'contain' | 'cover';
   featureUrl?: string;
   featureLabel?: string;
   image?: string;
@@ -96,6 +99,8 @@ const journeyArticles: JourneyArticle[] = [
   {
     en: {
       title: 'My journey into true software engineering',
+      cover: '/assets/career-simulation-thumbnail.jpg',
+      coverPosition: 'center top',
       excerpt: 'How requirements, system design, traceability, and team leadership changed the way I think about building software.',
       intro: 'I used to think software development was a race to the finish line: read the requirements, start coding, fix bugs, and deliver. If the application worked, I considered it a success. Looking back at my recent software engineering project, I realize how incomplete that perspective was. I walked in as a programmer, but I walked out with the mindset of an engineer.',
       readTime: '6 min read',
@@ -140,6 +145,8 @@ const journeyArticles: JourneyArticle[] = [
     },
     vi: {
       title: 'Hành trình hiểu đúng về Software Engineering',
+      cover: '/assets/career-simulation-thumbnail.jpg',
+      coverPosition: 'center top',
       excerpt: 'Cách yêu cầu, thiết kế hệ thống, khả năng truy vết và vai trò dẫn dắt nhóm thay đổi tư duy xây dựng phần mềm của tôi.',
       intro: 'Tôi từng nghĩ phát triển phần mềm là một cuộc đua đến đích: đọc yêu cầu, bắt đầu viết code, sửa lỗi rồi bàn giao. Chỉ cần ứng dụng hoạt động, tôi đã xem đó là thành công. Khi nhìn lại đồ án Software Engineering gần đây, tôi nhận ra góc nhìn ấy chưa trọn vẹn. Tôi bước vào dự án với tư duy của một lập trình viên, nhưng rời khỏi nó với tư duy của một kỹ sư.',
       readTime: '6 phút đọc',
@@ -186,6 +193,8 @@ const journeyArticles: JourneyArticle[] = [
   {
     en: {
       title: 'Leaning into the unknown: from fearing code to embracing AI',
+      cover: '/assets/emovis-thumbnail.png',
+      coverFit: 'contain',
       excerpt: 'How fear became curiosity—from struggling with programming to joining AI research and learning to work across disciplines.',
       intro: 'If you had told my middle school self that I would one day study Software Engineering—let alone take part in Artificial Intelligence research—I would not have believed you. Programming once felt impossibly difficult, but choosing to face that fear became the first step toward the path I follow today.',
       readTime: '7 min read',
@@ -230,6 +239,8 @@ const journeyArticles: JourneyArticle[] = [
     },
     vi: {
       title: 'Bước vào điều chưa biết: Từ sợ lập trình đến đón nhận AI',
+      cover: '/assets/emovis-thumbnail.png',
+      coverFit: 'contain',
       excerpt: 'Hành trình biến nỗi sợ thành sự tò mò—từ khó khăn với lập trình đến nghiên cứu AI và học cách cộng tác liên ngành.',
       intro: 'Nếu ai đó từng nói với tôi thời THCS rằng một ngày tôi sẽ học Software Engineering, thậm chí tham gia nghiên cứu Trí tuệ Nhân tạo, có lẽ tôi đã không tin. Lập trình từng là một điều vô cùng khó khăn, nhưng quyết định đối diện với nỗi sợ ấy lại trở thành bước đầu tiên dẫn tôi đến con đường hôm nay.',
       readTime: '7 phút đọc',
@@ -276,6 +287,8 @@ const journeyArticles: JourneyArticle[] = [
   {
     en: {
       title: 'A new milestone: the 9th Chien Hsing scholarship',
+      cover: '/assets/chien-hsing-1.jpg',
+      coverPosition: 'center 42%',
       excerpt: 'Recognition for learning, perseverance, and research—and encouragement to continue growing through academic exchange and community contribution.',
       intro: 'Receiving the 9th Chien Hsing Industrial Technology Scholarship on 23 October 2026 marked a meaningful milestone in my university journey. I see it as both recognition of the work so far and encouragement to keep learning, contributing, and exploring new academic connections.',
       readTime: '3 min read',
@@ -314,6 +327,8 @@ const journeyArticles: JourneyArticle[] = [
     },
     vi: {
       title: 'Một cột mốc mới: Học bổng Chấn hưng lần IX',
+      cover: '/assets/chien-hsing-1.jpg',
+      coverPosition: 'center 42%',
       excerpt: 'Sự ghi nhận cho học tập, nghị lực và nghiên cứu—cùng động lực tiếp tục phát triển qua trao đổi học thuật và đóng góp cho cộng đồng.',
       intro: 'Nhận Học bổng Kỹ thuật Công nghiệp Chấn hưng Việt Nam lần thứ IX ngày 23/10/2026 là một cột mốc ý nghĩa trong hành trình đại học của tôi. Tôi xem đây vừa là sự ghi nhận những nỗ lực đã qua, vừa là lời động viên để tiếp tục học hỏi, đóng góp và mở rộng kết nối học thuật.',
       readTime: '3 phút đọc',

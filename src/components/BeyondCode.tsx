@@ -33,9 +33,26 @@ export function BeyondCode() {
           return (
             <article
               key={currentArticle.title}
-              className="brutal-card-sm flex min-w-0 flex-col justify-between bg-paper p-3.5"
+              className="brutal-card-sm group relative flex min-w-0 flex-col overflow-hidden bg-paper transition-shadow hover:shadow-[3px_3px_0_var(--color-line)]"
             >
-              <div>
+              <button
+                type="button"
+                onClick={() => setActiveArticle(currentArticle)}
+                aria-label={`${t('article.read')}: ${currentArticle.title}`}
+                aria-haspopup="dialog"
+                className="absolute inset-0 z-10 cursor-pointer focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-blue-pop"
+              />
+              <div className="aspect-[16/9] overflow-hidden border-b border-ink/20 bg-cream">
+                <img
+                  src={currentArticle.cover ?? currentArticle.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className={`h-full w-full motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.025] ${currentArticle.coverFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  style={{ objectPosition: currentArticle.coverPosition ?? 'center' }}
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-3.5">
                 <div className="flex justify-between items-center mb-3">
                   <span className="select-none border border-ink bg-blue-pop px-2 py-0.5 text-[10px] font-bold text-ink">
                     {t('article.tag')}
@@ -43,21 +60,15 @@ export function BeyondCode() {
                   <span className="text-[10px] font-bold text-ink/70">{currentArticle.readTime}</span>
                 </div>
                 <h3 className="text-sm font-semibold leading-snug text-ink">
-                  <button type="button" onClick={() => setActiveArticle(currentArticle)} className="cursor-pointer text-left hover:underline">{currentArticle.title}</button>
+                  {currentArticle.title}
                 </h3>
                 <p className="mt-2 line-clamp-3 text-xs font-normal leading-relaxed text-ink/75">
                   {currentArticle.excerpt}
                 </p>
+                <span className="mt-auto pt-4 text-left text-[11px] font-semibold text-ink underline decoration-ink/30 underline-offset-4 group-hover:decoration-ink">
+                  {t('article.read')} <span aria-hidden="true">↗</span>
+                </span>
               </div>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveArticle(currentArticle);
-                }}
-                className="mt-5 cursor-pointer text-left text-[11px] font-semibold text-ink underline hover:text-pink-pop"
-              >
-                {t('article.read')} →
-              </button>
             </article>
           );
         })}

@@ -19,7 +19,7 @@ export function About() {
           <span className="text-xs text-ink/60">{lang === 'en' ? 'Aug 2026 – Present' : '08/2026 – Hiện tại'}</span>
         </div>
         <p className="mt-2 text-sm font-medium text-ink/85">
-          {lang === 'en' ? 'AI-Integrated Career Simulation Platform' : 'Nền tảng mô phỏng nghề nghiệp tích hợp AI'}
+          HCM-UTE Career Simulation Platform
         </p>
         <p className="mt-2 text-sm leading-relaxed text-ink/80">
           {lang === 'en'
